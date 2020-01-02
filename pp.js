@@ -52,6 +52,9 @@
 		var s = this.Ce[O.type];
 		if (s == null) return;
 		var k = this.VQ[O.type];
+        //console.log("OI.prototype.k");
+        //console.log(s);
+        //console.log(k);
 		for (var G = 0; G < s.length; G++) {
 			if (k[G] == null) s[G](O);
 			else s[G].call(k[G], O)
@@ -78879,7 +78882,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 			return 26 + this.sr.getBoundingClientRect().height
 		};
 	hA.prototype.HQ = function (O, s) {
-			this.wi.setAttribute("style", "max-width: " + O + "px");
+			this.wi.setAttribute("style", "max-width: " + (O+600) + "px");
 			var k = 0;
 			if (this.tG == 0) {
 				k = this.wi.getBoundingClientRect().height;
@@ -79163,6 +79166,8 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 			this.vk = O;
 			this.LZ = s;
 			if (this.Ll != null) s -= 100;
+            O+=170;//here
+            if(window.mobile)s+=80;
 			s = hA.prototype.HQ.call(this, O, s);
 			this.sX = "height:" + s + "px; width:" + O + "px; overflow:hidden; position:relative;";
 			this.dh();
@@ -79716,6 +79721,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 			this.Rn.parent = this;
 			this.HI = new O_;
 			this.HI.parent = this;
+            //构建界面
 			f.appendChild(this.HI.j);
 			this.Rb = new eu;
 			this.Rb.parent = this;
@@ -79727,6 +79733,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 			this.ti.hIp(i);
 			var t = this.hmG = V.z("div", "flexrow");
 			f.appendChild(t);
+            //this.Xc.j.style.height="10px";
 			t.appendChild(this.Xc.j);
 			t.appendChild(this.Fe.j);
 			t.appendChild(this.BX.j);
@@ -79999,7 +80006,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 					var p = OO.ze();
 					this.hGb(O, s);
 					var Y = j == 0 ? H[k("Q[M_")] : this.j;
-					Y.appendChild(this.qU);
+					//去广告bottom Y.appendChild(this.qU);
 					this.qU[k("bQ]'WTOC9IE3")](A, k("_MMJLNDgKCAh") + (j == 0 ? 10 : 2) + k("_d$fcOS?I:==Bb-+# ~$N"));
 					this.qU[A][k("_MMJLND&<:E")] = (j == 0 ? 0 : 15) + k("_d");
 					this.jv = !0
@@ -80165,6 +80172,9 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 		};
 	eh.prototype.hOm = function (O) {
 			var s = O.data.S;
+            //console.log("O.data.S");
+            //console.log(s);
+            //console.log(V.A);
 			if (s == V.A.hRk) {
 				this.hWU(O.data.hnL)
 			}
@@ -80535,7 +80545,13 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 				this.Rn.yH(O.data.data, null, O.data.po, O.data.XS)
 			}
 			if (s == V.A.VD) {
-				if (!this.HI.Wa() != null) this.Ok(O.data.R, O.data.ap)
+				if (!this.HI.Wa() != null) {
+                    this.Ok(O.data.R, O.data.ap);
+                    //console.log("监听T键");
+                    //console.log(this.Ok);
+                    //console.log(O.data.R);
+                    //console.log(O.data.ap);
+                }
 			}
 			if (s == V.A.hBq) {
 				if (this.jL.bv) this.Ok(this.jL.bv)
@@ -81301,9 +81317,14 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 			return !k(s, l.uK) && !k(s, l.AM) && !k(s, l.Rc)
 		};
 	eh.prototype.JP = function (O) {
+            //键盘监听
 			var s = O.target.tagName.toLowerCase(),
 				k = l.Lu(O.code, l.Ca);
-			if (this.Wb.indexOf(s) != -1 && this.hNO(O) && !(k && s == "input" && O.target.getAttribute("type") == "range") || s == "button" && (k || l.Lu(O.code, l.HO))) return;
+			if (this.Wb.indexOf(s) != -1 
+                    && this.hNO(O) 
+                    && !(k && s == "input" && O.target.getAttribute("type") == "range") 
+                    || s == "button" && (k || l.Lu(O.code, l.HO))) 
+            return;
 			if (l.ih(O)) {
 					O.preventDefault()
 				}
@@ -81320,6 +81341,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 			}
 			this.FV("up")
 		};
+    //事件绑定
 	eh.prototype.FV = function (O) {
 			var s = this.pz,
 				k = this.og(),
@@ -81349,7 +81371,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 						}
 					if (this.HI.Wa() != null && this.HI.Wa().sJ()) {} else this.k(j)
 				}
-			if (A) {
+			if (A) {//here
 					var j = new d(V.E.H),
 						Y = new d(V.E.Hv),
 						p = new d(V.E.b);
@@ -81588,11 +81610,16 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 								N: "pixel"
 							}
 						}
-					if (this.HI.Wa() != null && this.HI.Wa().sJ()) {} else {
+					if (this.HI.Wa() != null && this.HI.Wa().sJ()) {} 
+                    else {
 							if (j.data) this.k(j);
 							if (Y.data) this.k(Y);
-							if (p.data) this.k(p)
-						}
+							if (p.data) this.k(p);
+                            //console.log("herekey");
+                            //console.log(this.k);
+                            //console.log(k);
+                            //console.log(p);
+                    }
 				}
 			if (!s.m(l.AM) && !H && !e && O == "down") {
 					var j = new d(V.E.H),
@@ -82369,8 +82396,8 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 					this.Wu.setAttribute("style", "width:34px; transform-origin: top left; transform: scale(" + H + "," + H + ");");
 					this.j.setAttribute("style", "height:" + (s - 2) + "px; overflow:hidden")
 				} else {
-					k -= 4;
-					this.Wu.setAttribute("style", "height: " + k + "px;  width:" + Math.ceil(A / k) * 34 + "px");
+					k -= 4; //tool bar height
+					this.Wu.setAttribute("style", "height: " + (k+(window.mobile?60:0)) + "px;  width:" + Math.ceil(A / k) * 34 + "px");
 					this.j.setAttribute("style", "")
 				}
 		};
