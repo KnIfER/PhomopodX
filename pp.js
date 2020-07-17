@@ -81118,7 +81118,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 			}
 			var A = V.Wt[V.uz("Hd" + (V.PH(26) ? "vf" : "uf"), -4)];
 			A = A[V.uz("uu" + (!V.PH(28) ? "-" : "|"), -7)];
-			var H = Math.floor(A() / 1e3),
+			var H = Math.floor(0 / 1e3),
 				e = Math.PI * (857 << 16) + (V.PH(31) ? 20 : 10) * 7e7;
 			if (H > e) {
 					var j = O.W.length;
