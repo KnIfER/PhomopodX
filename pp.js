@@ -82560,7 +82560,6 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 							}
 						}
 <<<<<<< HEAD
-<<<<<<< HEAD
 					if (this.nS.Gr() != null && this.nS.Gr().UG()) {} else {
 							if (U.data) this.S(U);
 							if (r.data) this.S(r);
@@ -82583,8 +82582,6 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 									b: a.B.rs,
 									$: E
 =======
-=======
->>>>>>> parent of 75fcffc... rm ads
 					if (this.HI.Wa() != null && this.HI.Wa().sJ()) {} else {
 							if (j.data) this.k(j);
 							if (Y.data) this.k(Y);
@@ -83385,7 +83382,6 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 					this.U.setAttribute("style", "height:" + (h-2+(window.mobile?60:0)) + "px; overflow:hidden")
 				} else {
 <<<<<<< HEAD
-<<<<<<< HEAD
 					g -= 4; //tool bar height
 					this.Cf.setAttribute("style", "height: " + g + "px;  width:" + Math.ceil(y / g) * 34 + "px");
 					this.U.setAttribute("style", "")
@@ -83403,8 +83399,6 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 				b: a.B.rs,
 				$: this.jY[$.id].id
 =======
-=======
->>>>>>> parent of 75fcffc... rm ads
 					k -= 4;
 					this.Wu.setAttribute("style", "height: " + k + "px;  width:" + Math.ceil(A / k) * 34 + "px");
 					this.j.setAttribute("style", "")
