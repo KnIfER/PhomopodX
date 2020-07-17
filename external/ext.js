@@ -580,7 +580,7 @@ FromPS._getDictStack = function (adefs, aprcs) {
 
 	systemdict["product"] = {
 			typ: "string",
-			val: FromPS.makeStr("Photopea")
+			val: FromPS.makeStr("PhomopodX")
 		};
 	systemdict["version"] = {
 			typ: "string",
@@ -20134,7 +20134,7 @@ UTEX.PVR = {
 				"t286": [0],
 				"t287": [0],
 				"t296": [1],
-				"t305": ["Photopea (UTIF.js)"],
+				"t305": ["PhomopodX (UTIF.js)"],
 				"t338": [1]
 			};
 			if (metadata) for (var i in metadata) idf[i] = metadata[i];

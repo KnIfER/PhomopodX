@@ -539,7 +539,7 @@
 		};
 	h_.nW = function (O) {
 			h_.O_ = O;
-			var s = "https://www.photopea.com/papi/login.php?redirect=" + encodeURIComponent(window.location.href);
+			var s = "https://www.phomopodX.com/papi/login.php?redirect=" + encodeURIComponent(window.location.href);
 			h_.aZ = window.open(s, "_blank")
 		};
 	h_.hCy = function () {
@@ -580,7 +580,7 @@
 		};
 	h_.huk = function () {
 			var O = new XMLHttpRequest;
-			O.open("POST", "https://www.photopea.com/papi/record_new.php", !0);
+			O.open("POST", "https://www.phomopodX.com/papi/record_new.php", !0);
 			O.onload = h_.hMX;
 			var s = h_.nC() + "&read=2";
 			O.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
@@ -588,7 +588,7 @@
 		};
 	h_.Wf = function () {
 			var O = new XMLHttpRequest;
-			O.open("POST", "https://www.photopea.com/papi/record_new.php", !0);
+			O.open("POST", "https://www.phomopodX.com/papi/record_new.php", !0);
 			O.onload = h_.huv;
 			var s = h_.nC() + "&read=1";
 			O.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
@@ -596,7 +596,7 @@
 		};
 	h_.aA = function (O) {
 			var s = new XMLHttpRequest;
-			s.open("POST", "https://www.photopea.com/papi/record_new.php", !0);
+			s.open("POST", "https://www.phomopodX.com/papi/record_new.php", !0);
 			s.onload = h_.hMZ;
 			var k = h_.nC() + "&read=0&score=0&spublic=" + h_.af + "&record=" + encodeURIComponent(JSON.stringify(O));
 			s.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
@@ -663,7 +663,7 @@
 		};
 	h_.order = function (O, s, k) {
 			h_.O_ = k;
-			var G = "https://www.photopea.com/papi/order.php?ptype=" + s + "&param=" + O + "&uid=" + localStorage[h_.oo + "_uid"] + "&token=" + localStorage[h_.oo + "_token"];
+			var G = "https://www.phomopodX.com/papi/order.php?ptype=" + s + "&param=" + O + "&uid=" + localStorage[h_.oo + "_uid"] + "&token=" + localStorage[h_.oo + "_token"];
 			h_.aQ = window.open(G, "_blank")
 		};
 	var mB = {};
@@ -1502,7 +1502,7 @@
 					if (mj.zU(Q, [0, 0, 1, 10, 14, 0, 0, 0])) Q = Q.slice(78);
 					var b = r.wC(Q, 4, 4),
 						R = r._X(Q, String.fromCharCode(255) + String.fromCharCode(216) + String.fromCharCode(255));
-					if (b == "ftyp") alert("Photopea found a " + hg.PL(Q.length) + " MP4 video inside your image.", 4e3);
+					if (b == "ftyp") alert("PhomopodX found a " + hg.PL(Q.length) + " MP4 video inside your image.", 4e3);
 					else if (b == "edof") {
 							var m = Q[8 + 7];
 							console.log(m.toString(16));
@@ -21396,7 +21396,7 @@
 						h += 4;
 						r.YX(k, h, "enUS");
 						h += 4;
-						var c = "ICC by Photopea\0",
+						var c = "ICC by PhomopodX\0",
 							z = c.length * 2 + 2;
 						r.J(k, h, z);
 						h += 4;
@@ -24222,7 +24222,7 @@
 					t282: [72],
 					t283: [72],
 					t296: [2],
-					t305: ["Photopea Editor (www.photopea.com)"],
+					t305: ["PhomopodX Editor (www.phomopodX.com)"],
 					t306: [w[0] + ":" + w[1] + ":" + w[2] + " " + w[3] + ":" + w[4] + ":" + w[5]]
 				},
 				{
@@ -62872,7 +62872,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 				G = O.target;
 			if (G == this.hI) {
 					var A = this.hI.B();
-					if (A == null) window.hG_("An error occured. Please, write us an email to support@photopea.com and describe what you did.");
+					if (A == null) window.hG_("An error occured. Please, write us an email to support@phomopodX.com and describe what you did.");
 					s.Tracking = A
 				}
 			if (G == this.hB) {
@@ -67324,7 +67324,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 			var s = new d(V.E.b, !0);
 			s.data = {
 				S: V.A.dr,
-				link: "https://www.photopea.com/api/accounts#" + (O.target == this.hMS ? "teams" : "distributors")
+				link: "https://www.phomopodX.com/api/accounts#" + (O.target == this.hMS ? "teams" : "distributors")
 			};
 			this.k(s)
 		};
@@ -69781,7 +69781,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 		};
 	Uy.dj = [{
 			oO: "Hello",
-			Py: "\nalert(\"Hello Photopea!\");\n"
+			Py: "\nalert(\"Hello PhomopodX!\");\n"
 		},
 		{
 			oO: "Process Layers",
@@ -70742,7 +70742,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 		};
 
 	function nA() {
-			mW.call(this, "Raw Photopea", "rawpea");
+			mW.call(this, "Raw PhomopodX", "rawpea");
 			this.Ir = null;
 			this.hC = null;
 			this.gB = null;
@@ -71566,7 +71566,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 			this.RT = [];
 			var O = this.body,
 				s = V.z("p");
-			s.textContent = "These files are loaded every time you start Photopea.";
+			s.textContent = "These files are loaded every time you start PhomopodX.";
 			O.appendChild(s);
 			this.hBs = 0;
 			this.gd = V.z("span");
@@ -78435,14 +78435,14 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 			}
 		};
 	hZ.hXc = function (O, s, k, G) {
-			if (window.location.href.indexOf("photopea.com") == -1) hZ.WM(O, s, k, G);
+			if (window.location.href.indexOf("phomopodX.com") == -1) hZ.WM(O, s, k, G);
 			else {
 				try {
 					hZ.WM(O, s, k, G)
 				} catch (mj) {
 					if (mj == "low_ram") {} else {
-						var A = "Unexpected file structure. Please, send your file to support@photopea.com and we will solve it.";
-						if (mj.LG(s) == "eps") A = "We support only basic EPS files. Convert your file into PDF (with any online converter) and open the PDF in Photopea.";
+						var A = "Unexpected file structure. Please, send your file to support@phomopodX.com and we will solve it.";
+						if (mj.LG(s) == "eps") A = "We support only basic EPS files. Convert your file into PDF (with any online converter) and open the PDF in PhomopodX.";
 						window.hG_(A, 1e4)
 					}
 				}
@@ -79084,7 +79084,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 					};
 					else k = {
 						S: V.A.dr,
-						link: "https://www.photopea.com/translate?lang=" + s.hUG
+						link: "https://www.phomopodX.com/translate?lang=" + s.hUG
 					}
 				} else k = {
 					S: V.A.Ta,
@@ -79220,7 +79220,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 	function eh() {
 			mI.call(this);
 			YO.hNN(1);
-			this.j = V.z("div", "flexrow photopea");
+			this.j = V.z("div", "flexrow phomopodX");
 			this.bk = V.z("div");
 			this.j.appendChild(this.bk);
 			this.Ag = {
@@ -79923,7 +79923,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 					var h = s.split("/"),
 						c = h.pop(),
 						z = h.pop();
-					if (z != null && c != null && z.endsWith("photopea.com") && c.length == 2) {
+					if (z != null && c != null && z.endsWith("phomopodX.com") && c.length == 2) {
 							mB.nf(c);
 							this.a();
 							this.vP()
@@ -79951,7 +79951,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 						if (Y == ">") p++
 					}
 				if (j * p == 9) {
-						var M = ["//github.com/photopea/photopea/issues", "//www.facebook.com/photopea/", "//blog.photopea.com/introduction.html"];
+						var M = ["//github.com/phomopodX/phomopodX/issues", "//www.facebook.com/phomopodX/", "//blog.phomopodX.com/introduction.html"];
 						for (var e = 0; e < 3; e++) {
 							var h = G.indexOf("<", A),
 								c = G.indexOf(">", A),
@@ -80320,7 +80320,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 			if (s == V.A.hwZ) {
 				var X = this.PA.Wc;
 				if (X.el && !X.hxp) {
-					X.h_d = window.confirm("Load \"" + O.data.Z$ + "\" also next time you use Photopea?\nManage it in Edit - Local Storage.");
+					X.h_d = window.confirm("Load \"" + O.data.Z$ + "\" also next time you use PhomopodX?\nManage it in Edit - Local Storage.");
 					X.hxp = !0
 				}
 				if (X.h_d) {
@@ -82018,7 +82018,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 				return
 			}
 			var k = "CTA  issues learn blog api twitter facebook".split(" "),
-				G = "//bit.ly/34sCf9r  //github.com/photopea/photopea/issues //www.photopea.com/learn //blog.photopea.com //www.photopea.com/api //twitter.com/photopeacom //www.facebook.com/photopea/".split(" "),
+				G = "//bit.ly/34sCf9r  //github.com/phomopodX/phomopodX/issues //www.phomopodX.com/learn //blog.phomopodX.com //www.phomopodX.com/api //twitter.com/phomopodXcom //www.facebook.com/phomopodX/".split(" "),
 				A = window.ga;
 			if (A) A("send", "event", "Links", k[s]);
 			var H = new d(V.E.b, !0);
@@ -84484,7 +84484,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 					Z: V.E.b,
 					i: {
 						S: V.A.dr,
-						link: "https://www.photopea.com/translate/"
+						link: "https://www.phomopodX.com/translate/"
 					}
 				});
 			var s = {
@@ -84515,7 +84515,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 					})
 				}
 			O.items.push({
-					name: "Install Photopea",
+					name: "Install PhomopodX",
 					g: function (p, Y) {
 						return {
 							g: Y.WU != null
