@@ -79179,7 +79179,8 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 					if (O / k < s / G) A = O / k;
 					else A = s / G
 				}
-			H += "background-image:url(" + PIMG.intro + "); background-size: " + k + "px " + G + "px;";
+			//H += "background-image:url(" + PIMG.intro + "); background-size: " + k + "px " + G + "px;";
+			H += "background-image:url('images/guide.svg'); background-size: " + k + "px " + G + "px;";
 			H += "position:relative; top:" + Math.round((s - G) / 2) + "px;  left: " + Math.round((O - k) / 2) + "px; width:" + k + "px; height:" + G + "px;";
 			if (A != 1) H += "transform: scale(" + A + "," + A + ");";
 			if (this.jM) this.jM.setAttribute("style", H)
