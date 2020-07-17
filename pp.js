@@ -46,6 +46,7 @@
 			L.splice(L.indexOf(this), 1)
 		}
 	};
+<<<<<<< HEAD
 	Tk.prototype.S = function ($) {
 		$.currentTarget = this;
 		if ($.target == null) $.target = this;
@@ -55,6 +56,17 @@
 		for (var l = 0; l < h.length; l++) {
 			if (g[l] == null) h[l]($);
 			else h[l].call(g[l], $)
+=======
+	OI.prototype.k = function (O) {
+		O.currentTarget = this;
+		if (O.target == null) O.target = this;
+		var s = this.Ce[O.type];
+		if (s == null) return;
+		var k = this.VQ[O.type];
+		for (var G = 0; G < s.length; G++) {
+			if (k[G] == null) s[G](O);
+			else s[G].call(k[G], O)
+>>>>>>> parent of 75fcffc... rm ads
 		}
 	};
 
@@ -79503,12 +79515,21 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 	TP.prototype.HRf = function () {
 			return 26 + this.kV.getBoundingClientRect().height
 		};
+<<<<<<< HEAD
 	TP.prototype.ON = function ($, h) {
 			this.XT.setAttribute("style", "max-width: " + ($+600) + "px");
 			var g = 0;
 			if (this.yy == 0) {
 				g = this.XT.getBoundingClientRect().height;
 				g = Math.max(g, 26)
+=======
+	hA.prototype.HQ = function (O, s) {
+			this.wi.setAttribute("style", "max-width: " + O + "px");
+			var k = 0;
+			if (this.tG == 0) {
+				k = this.wi.getBoundingClientRect().height;
+				k = Math.max(k, 26)
+>>>>>>> parent of 75fcffc... rm ads
 			}
 			if (this.Pa != -1) this.kn[this.Pa].ON($, h - g);
 			return h - g
@@ -79750,6 +79771,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 						url: ["images/pea.psd", "images/milk.sketch"][h - 2]
 					}
 				};
+<<<<<<< HEAD
 			this.S(g)
 		};
 	$c.prototype.O = function () {
@@ -79827,6 +79849,83 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 					$: k.Gy,
 					C: {
 						b: p.rz
+=======
+			this.k(k)
+		};
+	ec.prototype.a = function () {
+			for (var O = 0; O < this.PD.length; O++) this.PD[O].a()
+		};
+	ec.prototype.md = function (O, s) {
+			for (var k = 0;
+			k < s.length; k++) {
+				var G = s[k];
+				this.TL[k].oq(G.name + (G.ku() ? " *" : ""))
+			}
+			hA.prototype.md.call(this, O, s)
+		};
+	ec.prototype.hGC = function (O) {
+			this.j.appendChild(this.Ls);
+			var s = O[0],
+				k = O[1],
+				G = O[2];
+			this.Ll = s;
+			this.Ls[G](s);
+			s[G](k);
+			this.HQ(this.vk, this.LZ)
+		};
+	ec.prototype.hGq = function () {
+			if (this.Ll) {
+				this.j.removeChild(this.Ls);
+				this.Ls.removeChild(this.Ll);
+				this.Ll = null;
+				this.HQ(this.vk, this.LZ)
+			}
+		};
+	ec.prototype.yP = function () {
+			return this.jM
+		};
+	ec.prototype.HQ = function (O, s) {
+			this.vk = O;
+			this.LZ = s;
+			if (this.Ll != null) s -= 100;
+			s = hA.prototype.HQ.call(this, O, s);
+			this.sX = "height:" + s + "px; width:" + O + "px; overflow:hidden; position:relative;";
+			this.dh();
+			var k = 512,
+				G = 410,
+				A = 1,
+				H = "";
+			if (O < k || s < G) {
+					if (O / k < s / G) A = O / k;
+					else A = s / G
+				}
+			H += "background-image:url(" + PIMG.intro + "); background-size: " + k + "px " + G + "px;";
+			H += "position:relative; top:" + Math.round((s - G) / 2) + "px;  left: " + Math.round((O - k) / 2) + "px; width:" + k + "px; height:" + G + "px;";
+			if (A != 1) H += "transform: scale(" + A + "," + A + ");";
+			if (this.jM) this.jM.setAttribute("style", H)
+		};
+	ec.prototype.U_ = function (O) {
+			hA.prototype.U_.call(this, O);
+			V.I_(O.RZ, this.hOc)
+		};
+	ec.prototype.UF = function (O) {
+			var s = this.TL[O];
+			V.Ez(s.RZ, this.hOc);
+			hA.prototype.UF.call(this, O)
+		};
+	ec.prototype.hGH = function (O) {
+			var s = this.jK;
+			this.jK = Date.now();
+			if (Date.now() - s > 300) return;
+			var k = this.hWL(O.currentTarget),
+				G = this.TL[k].ox.name,
+				A = new d(V.E.b, !0),
+				H = {
+					Z: V.E.H,
+					R: T.LR,
+					i: {
+						S: _.Yk
+>>>>>>> parent of 75fcffc... rm ads
 					}
 				};
 			y.data = {
@@ -80337,6 +80436,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 						console.log("Registration failed with " + E)
 					})
 				}
+<<<<<<< HEAD
 			this.VP = 0;
 			this.XZ = [];
 			this.AM = new H_;
@@ -80358,6 +80458,29 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 			_.appendChild(this.YR.U);
 			_.appendChild(this.sD.U);
 			this.AM.$g({
+=======
+			this.bl = 0;
+			this.Lm = [];
+			this.Rn = new hZ;
+			this.Rn.parent = this;
+			this.HI = new O_;
+			this.HI.parent = this;
+			f.appendChild(this.HI.j);
+			this.Rb = new eu;
+			this.Rb.parent = this;
+			f.appendChild(this.Rb.j);
+			f.appendChild(this.ti.j);
+			var i = this.TD = V.z("div");
+			i.appendChild(this.et.j);
+			i.appendChild(this.W_.j);
+			this.ti.hIp(i);
+			var t = this.hmG = V.z("div", "flexrow");
+			f.appendChild(t);
+			t.appendChild(this.Xc.j);
+			t.appendChild(this.Fe.j);
+			t.appendChild(this.BX.j);
+			this.Rn.OV({
+>>>>>>> parent of 75fcffc... rm ads
 					url: "rsrc/basic/basic.zip"
 				});
 			this.Ru(k.pz);
@@ -80616,6 +80739,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 			if (T) {
 					if (a.Tw[l] && this.Ui) a.Tw[l]()
 				} else {
+<<<<<<< HEAD
 					if (U == 0) h -= 60;
 					else $ -= U == 1 ? 175 : 315
 				}
@@ -80656,6 +80780,48 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 				y.data = {
 					b: a.B.kj,
 					kN: "account"
+=======
+					if (j == 0) s -= 60;
+					else O -= j == 1 ? 175 : 315
+				}
+			this.ti.hod = this.PA.tK && this.jr;
+			if (e && this.jv) {
+					this.j[k("aQVUYE B@@5")](this.qU);
+					V.PW(this.qU);
+					this.Fe.hGq();
+					this.jv = !1
+				}
+			if (!e && !this.jv) {
+					var p = OO.ze();
+					this.hGb(O, s);
+					var Y = j == 0 ? H[k("Q[M_")] : this.j;
+					Y.appendChild(this.qU);
+					this.qU[k("bQ]'WTOC9IE3")](A, k("_MMJLNDgKCAh") + (j == 0 ? 10 : 2) + k("_d$fcOS?I:==Bb-+# ~$N"));
+					this.qU[A][k("_MMJLND&<:E")] = (j == 0 ? 0 : 15) + k("_d");
+					this.jv = !0
+				}
+			if (V.Pf(this.et.j)) M += 31;
+			if (V.Pf(this.W_.j)) M += 32;
+			this.ti.HQ(O, M);
+			var h = s - M,
+				c = k("fUMZK"),
+				z = k("WQRMKT"),
+				E = k("_d");
+			this.qU[A][z] = (j == 0 ? 100 >>> 1 : s - 3) + E;
+			this.qU[A][c] = (j == 0 ? O : 6 * Math.pow(10, 2)) + E;
+			this.Xc.HQ(O, h);
+			this.BX.HQ(O, h);
+			this.Fe.HQ(O - this.Xc.Jq() - this.BX.Jq(), h);
+			this.Rb.HQ(O, s);
+			this.HI.HQ(O, s)
+		};
+	eh.prototype.hGb = function (O, s) {
+			var k = function () {
+				var A = new d(V.E.b);
+				A.data = {
+					S: V.A.wW,
+					GF: "account"
+>>>>>>> parent of 75fcffc... rm ads
 				};
 				this.S(y)
 			}.bind(this),
@@ -80788,6 +80954,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 					exp: !1,
 					Uz: $.data.Uz
 				};
+<<<<<<< HEAD
 			if (g[2] == null) g[2] = l[g[0]].k[g[1]].k.length - 1;
 			if ($.data.AS) y.AS = JSON.parse(JSON.stringify($.data.AS));
 			l[g[0]].k[g[1]].k.splice(g[2] + 1, 0, y);
@@ -80829,6 +80996,49 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 							name: g.name.split(".")[0],
 							zz: l,
 							id: T
+=======
+			if (k[2] == null) k[2] = G[k[0]].s[k[1]].s.length - 1;
+			if (O.data.LP) A.LP = JSON.parse(JSON.stringify(O.data.LP));
+			G[k[0]].s[k[1]].s.splice(k[2] + 1, 0, A);
+			k[2]++;
+			this.WZ(ns.H)
+		};
+	eh.prototype.hOm = function (O) {
+			var s = O.data.S;
+			if (s == V.A.hRk) {
+				this.hWU(O.data.hnL)
+			}
+			if (s == V.A.hFp) {
+				this.a();
+				this.vP()
+			}
+			if (s == V.A.mM) this.vP();
+			if (s == V.A.hXz) if (this.PA.WU) {
+				this.PA.WU.prompt();
+				this.PA.WU = null
+			}
+			if (s == V.A.VP) this.Rb.hUA(O.data);
+			if (s == V.A.mQ) this.Rb.h_r(O.data);
+			if (s == V.A.KA) this.Rb.hUJ(O.data.yc);
+			if (s == V.A.Kl) this.Rb.hUC(O.data.yc);
+			if (s == V.A.KJ) this.Rb.VG();
+			if (s == V.A.FF) this.Fe.eK(O.data.Uo, O.data.push);
+			if (s == V.A.hYt) this.Fe.hGm();
+			if (s == V.A.JX) this.Fe.UF(this.Lm.indexOf(O.data.YC));
+			if (s == V.A.mc) {
+				var k = this.og(),
+					G = g.clone(k.hc()),
+					A = k.W[k.v[0]],
+					H = new L(0, 0, k.n, k.p),
+					e = hX.uY() + "-d71c-11e5-b1ae-a548a96e5f9f",
+					j = new d(V.E.b, !0);
+				if (O.data.GB == 0) {
+						var p = {
+							F: H,
+							name: k.name.split(".")[0],
+							T$: G,
+							id: e
+>>>>>>> parent of 75fcffc... rm ads
 						};
 						U.data = {
 							b: a.B.Rz,
@@ -81146,6 +81356,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 					GM: $.data.GM,
 					Is: $.data.Is
 				};
+<<<<<<< HEAD
 				U.$ = k.Gy;
 				this.S(U);
 				this.Ru(k.aD)
@@ -81196,6 +81407,58 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 							zh.Wv.push($.data.f);
 							zh.Wv.sort(function (cq, cB) {
 								return cq - cB
+=======
+				j.R = T.LR;
+				this.k(j);
+				this.Ok(T.yN)
+			}
+			if (s == V.A.hhd) {
+				W.xq = !W.xq;
+				if (this.Lm.length > 0) this.og().Q()
+			}
+			if (s == V.A.hMl) {
+				var a = h_.OR();
+				if (a != null && a.globals != null) this.Lv(a.globals);
+				this.LE()
+			}
+			if (s == V.A.h_e) {
+				this.Rn.yH(O.data.data, null, O.data.po, O.data.XS)
+			}
+			if (s == V.A.VD) {
+				if (!this.HI.Wa() != null) this.Ok(O.data.R, O.data.ap)
+			}
+			if (s == V.A.hBq) {
+				if (this.jL.bv) this.Ok(this.jL.bv)
+			}
+			if (s == V.A.wh) {
+				var o = this.jL.map[O.data.R].R,
+					k = this.og();
+				o.i$(O.data, this, k, this.pz, this.PA);
+				if (k) k.xd = !0;
+				this.hX$()
+			}
+			if (s == V.A.rb) {
+				var y = this.jL.map[O.data.R];
+				this.hoy(y);
+				y.Cz.Oq(O.data)
+			}
+			if (s == V.A.Ta) {
+				var k = this.og(),
+					$ = O.data.GB,
+					q = O.data._s,
+					nE = this.PA;
+				if (O.data.FW == "set") {
+						var mN = T.Om(q);
+						if (nE.Yi != mN) this.Ok(mN);
+						this.jL.map[mN].Cz.hy$(q, nE)
+					}
+				if (O.data.FW == "add") {
+						var P = ns.mE[$];
+						if ($ == ns.Xq) {
+							nE.xi.push(O.data.N);
+							nE.xi.sort(function (mK, me) {
+								return mK - me
+>>>>>>> parent of 75fcffc... rm ads
 							})
 						} else if (o == null) {
 							if (cr) zh.Mz.HKm(cr, $.data.HWh)
@@ -81900,6 +82163,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 						}
 				}
 			this.update();
+<<<<<<< HEAD
 			window.requestAnimationFrame(this.HPl)
 		};
 	Ti.prototype.update = function ($) {
@@ -81957,6 +82221,65 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 			if (this.AE.Gr() != null) {
 					if (h.c(I.G_)) {
 						this.AE.HHi()
+=======
+			window.requestAnimationFrame(this.hXo)
+		};
+	eh.prototype.update = function (O) {
+			var s = this.og();
+			if (s == null) return;
+			if (s.xd) this.oa(!0).ik(s, this, this.PA, this.pz);
+			if (s.VK) {
+				s.nB()
+			}
+			if (s.VK || s.DO || s.nn || s.rn || O) {
+				this.Fe.Pr(this.PA, null);
+				this.Fe.md(s, this.Lm)
+			}
+			if ((s.VK || s.rn || s.xd) && (!this.Ag.Fi || s.aV)) {
+				s.kM();
+				this.BX.md(s, this.Lm, this.PA);
+				this.Xc.hIa(s, this.pz);
+				s.MA = !1
+			}
+			s.aV = !1;
+			s.xd = !1;
+			s.VK = null;
+			s.DO = s.nn = s.rn = !1
+		};
+	eh.prototype.Wb = ["input", "textarea", "select"];
+	eh.prototype.hNO = function (O) {
+			var s = O.code,
+				k = l.Lu;
+			return !k(s, l.uK) && !k(s, l.AM) && !k(s, l.Rc)
+		};
+	eh.prototype.JP = function (O) {
+			var s = O.target.tagName.toLowerCase(),
+				k = l.Lu(O.code, l.Ca);
+			if (this.Wb.indexOf(s) != -1 && this.hNO(O) && !(k && s == "input" && O.target.getAttribute("type") == "range") || s == "button" && (k || l.Lu(O.code, l.HO))) return;
+			if (l.ih(O)) {
+					O.preventDefault()
+				}
+			this.pz.hdd(O.code);
+			this.FV("down")
+		};
+	eh.prototype.VC = function (O) {
+			if (l.Lu(O.code, l.iY)) this.pz.reset();
+			this.pz.hdZ(O.code);
+			var s = O.target.tagName.toLowerCase();
+			if (this.Wb.indexOf(s) != -1 && this.hNO(O)) return;
+			if (l.ih(O)) {
+				O.preventDefault()
+			}
+			this.FV("up")
+		};
+	eh.prototype.FV = function (O) {
+			var s = this.pz,
+				k = this.og(),
+				G = k != null && k.v.length != 0;
+			if (this.Rb.Wa() != null) {
+					if (s.m(l.uK)) {
+						this.Rb.hBy()
+>>>>>>> parent of 75fcffc... rm ads
 					}
 					return
 				}
@@ -81977,6 +82300,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 								b: "h_stepbck"
 							}
 						}
+<<<<<<< HEAD
 					if (this.nS.Gr() != null && this.nS.Gr().UG()) {} else this.S(U)
 				}
 			if (y) {
@@ -81992,6 +82316,23 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 									if (K == "hue2" && T) U.data = {
 										b: "auto",
 										XU: 3
+=======
+					if (this.HI.Wa() != null && this.HI.Wa().sJ()) {} else this.k(j)
+				}
+			if (A) {
+					var j = new d(V.E.H),
+						Y = new d(V.E.Hv),
+						p = new d(V.E.b);
+					if (!H) for (var M in mu.keys) {
+							var h = mu.keys[M],
+								c = !0;
+							for (var z = 0; z < h.length; z++) if (!s.m(h[z])) c = !1;
+							if (c) {
+									j.R = T.LA;
+									if (M == "hue2" && e) j.data = {
+										S: "auto",
+										WP: 3
+>>>>>>> parent of 75fcffc... rm ads
 									};
 									else U.data = {
 										b: "start",
@@ -82218,6 +82559,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 								f: "pixel"
 							}
 						}
+<<<<<<< HEAD
 					if (this.nS.Gr() != null && this.nS.Gr().UG()) {} else {
 							if (U.data) this.S(U);
 							if (r.data) this.S(r);
@@ -82239,6 +82581,29 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 							if ((q == null || q.indexOf(parseInt(E)) != -1) && !this.Lp.xP) S.data = {
 									b: a.B.rs,
 									$: E
+=======
+					if (this.HI.Wa() != null && this.HI.Wa().sJ()) {} else {
+							if (j.data) this.k(j);
+							if (Y.data) this.k(Y);
+							if (p.data) this.k(p)
+						}
+				}
+			if (!s.m(l.AM) && !H && !e && O == "down") {
+					var j = new d(V.E.H),
+						p = new d(V.E.b),
+						i = this.jL.map[this.PA.Yi],
+						t = -1;
+					for (var z = 0; z < this.jL.keys.length; z++) if (this.jL.keys[z] && this.Ud(this.jL.keys[z])) t = z;
+					if (t != -1) {
+							var I;
+							if (i.eA != t) I = this.jL.bb[t];
+							if (i.eA == t) I = (i.hxu + 1) % this.jL.Dr[t].length;
+							var Q = this.jL.Dr[t][I].R.id,
+								b = this.PA.hXE;
+							if ((b == null || b.indexOf(parseInt(Q)) != -1) && !this.Ag.Fi) p.data = {
+									S: V.A.VD,
+									R: Q
+>>>>>>> parent of 75fcffc... rm ads
 								}
 						}
 					if (h.c(I.LR)) S.data = {
@@ -83016,6 +83381,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 					this.Cf.setAttribute("style", "width:34px; transform-origin: top left; transform: scale(" + L + "," + L + ");");
 					this.U.setAttribute("style", "height:" + (h-2+(window.mobile?60:0)) + "px; overflow:hidden")
 				} else {
+<<<<<<< HEAD
 					g -= 4; //tool bar height
 					this.Cf.setAttribute("style", "height: " + g + "px;  width:" + Math.ceil(y / g) * 34 + "px");
 					this.U.setAttribute("style", "")
@@ -83032,6 +83398,24 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 			h.data = {
 				b: a.B.rs,
 				$: this.jY[$.id].id
+=======
+					k -= 4;
+					this.Wu.setAttribute("style", "height: " + k + "px;  width:" + Math.ceil(A / k) * 34 + "px");
+					this.j.setAttribute("style", "")
+				}
+		};
+	Oj.prototype.a = function () {
+			for (var O = 0; O < this.TL.length; O++) this.TL[O].a();
+			for (var O = 0; O < this.q_.length; O++) if (this.q_[O]) this.q_[O].a();
+			this.WL.setAttribute("title", mB.get([22, 7, 0]) + " (X)");
+			this.n_.setAttribute("title", mB.get([22, 7, 1]) + " (D)")
+		};
+	Oj.prototype.qr = function (O) {
+			var s = new d(V.E.b, !0);
+			s.data = {
+				S: V.A.VD,
+				R: this.jL[O.id].id
+>>>>>>> parent of 75fcffc... rm ads
 			};
 			this.S(h)
 		};
