@@ -1,4 +1,4 @@
-﻿(function () {
+﻿(function () { 
 	function Tk() {
 		this.Xw = {};
 		this.ZN = {}
