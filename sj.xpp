@@ -1,4 +1,11 @@
-﻿(function () {
+﻿
+addEvent('contextmenu', e=>{
+	stopX(e)
+});
+
+
+
+(function () {
 	function OI() {
 		this.Ce = {};
 		this.VQ = {}
@@ -58752,6 +58759,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 			A.__throw = !1;
 			A.__fs = {};
 			A.__window = {};
+			console.log('eval::', G, s, A);
 			Yq.eval(G, s, A);
 			var H = A.__fs;
 			if (Object.keys(H).length != 0) {
@@ -79266,7 +79274,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 				this.Rb.alert(I, Q);
 				console.log("Alert: " + I)
 			}.bind(this);
-			window.onmessage = function (I) {
+			window.onmessage = function (I) { // 运行脚本
 				if (I.data instanceof ArrayBuffer) {
 					var Q = mj.LG(I.data),
 						b = mj.oA(Q);

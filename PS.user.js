@@ -257,3 +257,7 @@ html,body{
 			switch_tool(26)
 		}
 	}, true);
+	
+	
+	// G, s, A
+	// window.onmessage({data:"app.activeDocument.activeLayer.translate(20,20);"}, "*")
