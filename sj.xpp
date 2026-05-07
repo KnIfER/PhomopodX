@@ -61462,7 +61462,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 			return this.zl()
 		};
 
-	function nt(O) {
+	function Tiaose(O) {
 			mI.call(this);
 			this.j = V.z("span", "fitem cswatch");
 			this.hYI = 0;
@@ -61481,15 +61481,15 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 			for (var k = 0; k < H; k++) this.iw[k] = A[k];
 			this.ym()
 		}
-	nt.prototype = new mI;
-	nt.prototype.hBX = function (O) {
+	Tiaose.prototype = new mI;
+	Tiaose.prototype.hBX = function (O) {
 			this.hYI = this.PD.indexOf(O.currentTarget);
 			this.k(new d(V.E.c))
 		};
-	nt.prototype.B = function () {
+	Tiaose.prototype.B = function () {
 			return this.iw[this.hYI]
 		};
-	nt.prototype.U = function (O) {
+	Tiaose.prototype.U = function (O) {
 			var s = this.iw,
 				k = s.indexOf(O);
 			if (k != -1) s.splice(k, 1);
@@ -61497,7 +61497,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 			s.unshift(O);
 			this.ym()
 		};
-	nt.prototype.ym = function () {
+	Tiaose.prototype.ym = function () {
 			for (var O = 0; O < this.iw.length;
 			O++) {
 				this.PD[O].setAttribute("style", "background-color:#" + g.pR(this.iw[O]))
@@ -61747,7 +61747,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 			this.IT = new ho(!0);
 			this.IT.parent = this.fD;
 			this.IT.u(V.E.c, this.Pe, this);
-			this.Su = new nt(10);
+			this.Su = new Tiaose(10);
 			this.Su.u(V.E.c, this.Pe, this);
 			this.Ti = V.z("div", "marged hiline");
 			this.Ti.appendChild(this.IT.j);
@@ -68152,7 +68152,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 			this.H$.setAttribute("style", "width:50px");
 			this.H$.addEventListener("change", this.wb.bind(this), !1);
 			s.appendChild(this.H$);
-			this.wY = new nt(9);
+			this.wY = new Tiaose(9);
 			this.wY.u(V.E.c, this.wb, this);
 			s.appendChild(this.wY.j);
 			this.hS = new md("OK", !0, null, !0);
@@ -72661,11 +72661,11 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 			this.yY()
 		};
 
-	function jF() {
+	function Sepan() {
 			mM.call(this, [9, 8], !1, null, mM.tt.hWO);
 			this.ss = V.z("div", "padded");
 			this.$T.appendChild(this.ss);
-			this.bs = new nt(10);
+			this.bs = new Tiaose(10); // 最近色
 			this.ss.appendChild(this.bs.j);
 			this.ss.appendChild(V.z("hr"));
 			this.kA = new nP;
@@ -72674,8 +72674,8 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 			this.bs.u(V.E.c, this.hNw, this);
 			this.kA.u(V.E.c, this.hNw, this)
 		}
-	jF.prototype = new mM("");
-	jF.prototype.hNw = function (O) {
+	Sepan.prototype = new mM("");
+	Sepan.prototype.hNw = function (O) {
 			var s;
 			if (O.target == this.bs) s = this.bs.B();
 			else {
@@ -72691,7 +72691,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 			};
 			this.k(G)
 		};
-	jF.prototype.Pr = function (O, s) {
+	Sepan.prototype.Pr = function (O, s) {
 			var k = O.VJ,
 				G = s == ns.Dn;
 			if (s == ns.PG || G) {
@@ -82192,7 +82192,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 			Js: 4
 		},
 		{
-			Fx: new jI,
+			Fx: new jI, // LujinPan
 			Js: 1
 		},
 		{
@@ -82204,8 +82204,8 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 			Js: 2
 		},
 		{
-			Fx: new jF,
-			Js: 0
+			Fx: new Sepan,
+			Js: 1 // 原 0 顶部
 		}];
 	ng.prototype.hI$ = function (O) {
 			for (var s = 0; s < O.length; s++) {
