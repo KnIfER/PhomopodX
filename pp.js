@@ -52,10 +52,9 @@
 		var s = this.Ce[O.type];
 		if (s == null) return;
 		var k = this.VQ[O.type];
-        // console.log("OI.prototype.k");
-        // console.log(s);
-		// console.log('target::', O.type, this, O.target);
-		
+        //console.log("OI.prototype.k");
+        //console.log(s);
+        //console.log(k);
 		for (var G = 0; G < s.length; G++) {
 			if (k[G] == null) s[G](O);
 			else s[G].call(k[G], O)
@@ -60386,7 +60385,6 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 			this.j = null;
 			this.vk = 0;
 			this.LZ = 0
-			// console.log('mI::', this);
 		}
 	mI.prototype = new OI;
 	mI.prototype.h_R = function (O) {
@@ -60409,17 +60407,6 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 	mI.prototype.k = function (O) {
 			OI.prototype.k.call(this, O);
 			if (O.bubbles && this.parent != null) this.parent.k(O)
-			// console.log('prototype::', O.id, O);
-			// console.log('prototype::',O.type=='2' , O.target);
-			// if(O.target==Yw && O.id!==undefined) {
-			var id = yws.indexOf(O.target);
-			if(id>=0 && O.id!==undefined) {
-				if(O.type=='2') {
-					window.currentTool = O.id;
-					console.log('currentTool::', currentTool);
-					// toast(" "+window.currentTool);
-				}
-			}
 		};
 	mI.prototype.hZd = function (O) {
 			O.stopPropagation();
@@ -78350,6 +78337,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 			R.open("POST", k.url, !0);
 			if (H) R.setRequestHeader("Content-Type", H);
 			R.addEventListener("load", hZ.h_i.bind(this));
+			de('save!!!')
 			R.send(new Blob([A.buffer]))
 		};
 	hZ.h_i = function (O) {
@@ -78691,14 +78679,10 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 			return A
 		};
 	hZ.save = function (O, s) {
-			de('saving!!!', s);
 			var k = new Uint8Array(O),
 				G = document.createElement("a");
-			var mime = {};
-			if(!s.endsWith('zip'))
-				mime.type = 'image/*'
 			if (typeof G.download == "string") {
-					var A = new Blob([k], mime),
+					var A = new Blob([k]),
 						H = window.URL.createObjectURL(A);
 					G.href = H;
 					G.download = s;
@@ -82511,10 +82495,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 			this.Rg.bZ(O.Rg)
 		};
 
-	window.yws = []
 	function Yw(O, s, k, G, A, H) {
-			if(window.yws.indexOf(this)==-1)
-				window.yws.push(this)
 			mI.call(this);
 			this.Ld = 0;
 			this.hwW = this.hXN.bind(this);
@@ -82538,12 +82519,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 			this.j.addEventListener("mouseover", this.hwW, !1);
 			this.j.addEventListener("contextmenu", Yw.Qi, !1)
 		}
-			
-	window.Yw = Yw
-	console.log('Yw.prototype::', window.yws);
 	Yw.prototype = new mI;
-	
-	
 	Yw.Qi = function (O) {
 			O.stopPropagation();
 			O.preventDefault();
@@ -82561,17 +82537,8 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 			var s = new d(V.E.c, !1);
 			s.target = this;
 			s.id = this.y$;
-			// window.currentTool = 
-			// console.log('yws::', window.yws.indexOf(this));
-			// console.log('id::', s, s.id);
-			// toast(s.id)
-			// console.log('this::', this.k);
 			this.k(s)
 		};
-	window.switch_tool = (id)=>{
-		console.log('switch_tool::', id);
-		window.yws[id].HM()
-	}
 	Yw.prototype.hXN = function (O) {
 			var s = new d("mover", !1);
 			s.target = this;
