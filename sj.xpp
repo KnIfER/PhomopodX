@@ -67116,6 +67116,9 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 			V.I_(this.Vr, this.hOw.bind(this));
 			this.body = V.z("div", "body");
 			this.j.appendChild(this.body)
+			
+			// console.log('j::', this.j);
+			this.j.style.left = "250px";
 		}
 	mW.prototype = new mI;
 	mW.prototype.sJ = function () {
@@ -67149,8 +67152,9 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 	mW.prototype.bf = function () {
 			return !1
 		};
-	mW.prototype.e$ = function (O, s) {
-			return O < 450 || s < 450 ? new C(0, 0) : new C(150, 150)
+	mW.prototype.e$ = function (O, s) { // 窗口默认 
+			// return O < 450 || s < 450 ? new C(0, 0) : new C(150, 150)
+			return O < 450 || s < 450 ? new C(0, 0) : new C(550, 70)
 		};
 	mW.prototype.HQ = function () {};
 	mW.prototype.close = function () {
@@ -67158,10 +67162,13 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 		};
 	mW.prototype.hKc = function (O) {
 			this.P_ = V.kZ(O, this.j);
+			// this.P_.x = 250
 			V.GD(window, this.AU);
 			V.I_(window, this.tQ)
 		};
-	mW.prototype.hKT = function (O) {
+	mW.prototype.hKT = function (O) { // move window
+			console.log('move::', this.P_);
+		
 			var s = this.j.parentNode,
 				k = V.kZ(O, s);
 			this.j.style.left = Math.round(k.x - this.P_.x) + "px";
