@@ -45576,7 +45576,7 @@ addEvent('contextmenu', e=>{
 		};
 	l.Rc = {
 			oO: "Alt",
-			sA: ["AltLeft", "AltRight"]
+			sA: ["AltLeft", "AltRight"] // altkey
 		};
 	l.hd$ = {
 			oO: "CtrlOrAlt",
@@ -81303,7 +81303,8 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 					this.jL.jV = null;
 					H.disable(A, this, k, s)
 				}
-			if (O.action == "scroll") {
+				console.log('鼠标滚轮::', O, s); // key down up
+			if (O.action == "scroll") { // 鼠标滚轮
 					var Y = new d(V.E.H, !0),
 						M = O.zS.clone();
 					if (Math.abs(M.x) + Math.abs(M.y) <= 2) {
@@ -81315,7 +81316,11 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 							zS: M,
 							Ht: G
 						};
-					Y.R = s.m(l.Rc) ? T.Lo : T.IN;
+					Y.R = T.Lo ;// s.m(l.Rc) ? T.Lo : T.IN;
+					if(window.keyEvent.shiftKey)
+						Y.R = T.IN
+					if(window.keyEvent.ctrlKey)
+						Y.R = T.IN
 					this.k(Y)
 				}
 		};
@@ -81381,7 +81386,8 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 			return !k(s, l.uK) && !k(s, l.AM) && !k(s, l.Rc)
 		};
 	eh.prototype.JP = function (O) {
-            //键盘监听
+			console.log('键盘监听::', O);
+			window.keyEvent = O
 			var s = O.target.tagName.toLowerCase(),
 				k = l.Lu(O.code, l.Ca);
 			if (this.Wb.indexOf(s) != -1 
@@ -81407,6 +81413,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 		};
     //事件绑定
 	eh.prototype.FV = function (O) {
+		console.log('事件绑定::', O); // key down up
 			var s = this.pz,
 				k = this.og(),
 				G = k != null && k.v.length != 0;
