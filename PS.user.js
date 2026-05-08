@@ -85,16 +85,26 @@ function delEvent(a, b, c, d) {
 		// 	lastTool = win.currentTool||lastTool;
 		// }, 350);
 		if(cman.children.length==3 && gc('contextpanel', cman)) {
-			var fileMenu = document.querySelector("body > div.flexrow.phomopodX > div > div.cmanager > div.contextpanel > div:nth-child(11)");
-			if(fileMenu)
-			if(fileMenu.innerText.startsWith('导出') || fileMenu.innerText.startsWith('Export')) {
-				de('yes')
-				fileMenu.click();
-				var moreBtn = document.querySelector("body > div.flexrow.phomopodX > div > div.cmanager > div:nth-child(4) > div:nth-child(6)")
-				// if(moreBtn) {
-					moreBtn.click();
-				// }
-				
+			var wMenu = document.querySelector("body > div.flexrow.phomopodX > div > div.cmanager > div.contextpanel");
+			if(wMenu) {
+				// console.log('wMenu::', wMenu);
+				var fileMenu = wMenu.children[10]
+				if(fileMenu) {
+					if(fileMenu.innerText.startsWith('导出') || fileMenu.innerText.startsWith('Export')) {
+						// de('yes')
+						fileMenu.click();
+						var moreBtn = document.querySelector("body > div.flexrow.phomopodX > div > div.cmanager > div:nth-child(4) > div:nth-child(6)")
+						// if(moreBtn) {
+							moreBtn.click();
+						// }
+					}
+				}
+				var adjMenu = wMenu.children[0]
+				if(adjMenu) {
+					if(adjMenu.innerText.startsWith('调整') || adjMenu.innerText.startsWith('Adjustments')) {
+						adjMenu.click();
+					}
+				}
 			}
 		}
 	}, 1)
