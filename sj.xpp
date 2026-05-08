@@ -43222,7 +43222,7 @@ addEvent('contextmenu', e=>{
 							var OP = new d(V.E.b);
 							OP.data = {
 								S: V.A.dD,
-								GF: DockPanel.tt.Pg
+								GF: DockPanel.dcNumbers.Pg
 							};
 							s.k(OP)
 						}
@@ -71716,11 +71716,11 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 			return this.hZy.clone()
 		};
 
-	function DockPanel(O, s, k, G) {
+	function DockPanel(O, ui_message, k, order) {
 			mI.call(this);
 			this.name = O;
 			this.hZq = k;
-			this.Cn = G;
+			this.Cn = order;
 			this.RZ = V.z("div", "");
 			this.RZ.setAttribute("draggable", "true");
 			this.$T = V.z("div", "pbody");
@@ -71734,7 +71734,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 			this.BJ.j.addEventListener("contextmenu", A, !1);
 			this.hIF.addEventListener("mousedown", this.ez.bind(this), !1);
 			this.RZ.appendChild(this.pO);
-			if (s) this.RZ.appendChild(this.hIF);
+			if (ui_message) this.RZ.appendChild(this.hIF);
 			this.OO = !1;
 			this.gC = new np([{
 				name: [1, 12]
@@ -71872,29 +71872,29 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 				s.textContent = this.hZM
 			}
 		};
-	DockPanel.tt = {
-			ot: "0",
-			hWO: "1",
-			LR: "2",
-			hWB: "3",
-			hWX: "4",
-			Pg: "5",
-			CSS: "6",
-			TY: "7",
-			hWR: "8",
-			hWu: "9",
-			hWP: "10",
-			hID: "11",
-			hCO: "12",
-			PG: "13",
-			Lj: "14",
-			hCG: "15",
-			hCX: "16",
-			TH: "17"
+	DockPanel.dcNumbers = {
+			dc_0		: "0",
+			dc_1		: "1",
+			dc_2		: "2",
+			dc_3		: "3",
+			hWX		: "4",
+			Pg		: "5",
+			CSS		: "6",
+			TY		: "7",
+			hWR		: "8",
+			hWu		: "9",
+			hWP		: "10",
+			hID		: "11",
+			hCO		: "12",
+			PG		: "13",
+			Lj		: "14",
+			hCG		: "15",
+			hCX		: "16",
+			TH		: "17"
 		};
 
 	function Yt() {
-			DockPanel.call(this, [9, 9], !1, null, DockPanel.tt.hID);
+			DockPanel.call(this, [9, 9], !1, null, DockPanel.dcNumbers.hID);
 			this.TM = null;
 			this.kw = [0, 0];
 			this.ss = V.z("div", "padded scrollable");
@@ -72144,7 +72144,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 		};
 
 	function mk() {
-			DockPanel.call(this, [9, 3], !1, null, DockPanel.tt.TY);
+			DockPanel.call(this, [9, 3], !1, null, DockPanel.dcNumbers.TY);
 			this.CX = null;
 			this.aL = null;
 			this.TM = null
@@ -72553,7 +72553,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 		};
 
 	function YE() {
-			DockPanel.call(this, [9, 0], !1, null, DockPanel.tt.ot);
+			DockPanel.call(this, [9, 0], !1, null, DockPanel.dcNumbers.dc_0);
 			this.$T.setAttribute("style", "min-width:200px;");
 			this.sr = V.z("div", "hpbody scrollable");
 			this.sr.style.height = "160px";
@@ -72614,7 +72614,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 		};
 
 	function YJ() {
-			DockPanel.call(this, [9, 10], !1, null, DockPanel.tt.hWX);
+			DockPanel.call(this, [9, 10], !1, null, DockPanel.dcNumbers.hWX);
 			var O = V.z("div", "padded");
 			this.$T.appendChild(O);
 			this.Tb = new Yh(256);
@@ -72682,7 +72682,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 		};
 
 	function Sepan() {
-			DockPanel.call(this, [9, 8], !1, null, DockPanel.tt.hWO);
+			DockPanel.call(this, [9, 8], !1, null, DockPanel.dcNumbers.dc_2);
 			this.ss = V.z("div", "padded");
 			this.$T.appendChild(this.ss);
 			this.bs = new Tiaose(10); // 最近色
@@ -72730,7 +72730,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 		};
 
 	function Yl() {
-			DockPanel.call(this, [12, 72], !1, null, DockPanel.tt.hCX);
+			DockPanel.call(this, [12, 72], !1, null, DockPanel.dcNumbers.hCX);
 			this.hp = null;
 			this.Fo = null;
 			this.sr = V.z("div", "lpbody scrollable");
@@ -73013,7 +73013,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 		};
 
 	function jI() {
-			DockPanel.call(this, [8, 9], !1, null, DockPanel.tt.TH);
+			DockPanel.call(this, [8, 9], !1, null, DockPanel.dcNumbers.TH);
 			this.hp = null;
 			this.Fo = null;
 			this.o_ = [];
@@ -73154,7 +73154,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 		};
 
 	function YC(O) {
-			DockPanel.call(this, [9, O ? 4 : 5], !1, null, O ? DockPanel.tt.hWu : DockPanel.tt.hWP);
+			DockPanel.call(this, [9, O ? 4 : 5], !1, null, O ? DockPanel.dcNumbers.hWu : DockPanel.dcNumbers.hWP);
 			this.$T.setAttribute("style", "min-width:240px;");
 			this.hQe = O;
 			this.hz = null;
@@ -73241,7 +73241,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 		};
 
 	function Yk() {
-			DockPanel.call(this, [13, 0], !1, null, DockPanel.tt.PG);
+			DockPanel.call(this, [13, 0], !1, null, DockPanel.dcNumbers.PG);
 			this.gr = 0;
 			this.hor = 0;
 			this.TM = null;
@@ -73306,7 +73306,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 		};
 
 	function UR() {
-			DockPanel.call(this, "CSS", !1, null, DockPanel.tt.CSS);
+			DockPanel.call(this, "CSS", !1, null, DockPanel.dcNumbers.CSS);
 			this.QL = null;
 			var O = V.z("div", "padded");
 			this.$T.appendChild(O);
@@ -73337,7 +73337,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 		};
 
 	function hI() {
-			DockPanel.call(this, [9, 6], !1, null, DockPanel.tt.hWB);
+			DockPanel.call(this, [9, 6], !1, null, DockPanel.dcNumbers.dc_3);
 			this.$T.setAttribute("style", "min-width:240px;");
 			this.QL = null;
 			this.TM = null;
@@ -73428,8 +73428,8 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 			this.di()
 		};
 
-	function hn() {
-			DockPanel.call(this, [9, 1], !1, null, DockPanel.tt.LR);
+	function LayersPan() {
+			DockPanel.call(this, [9, 1], !1, null, DockPanel.dcNumbers.dc_1);
 			this.kV = null;
 			this.ox = null;
 			this.WD = null;
@@ -73707,11 +73707,11 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 			this.hKQ = new np(jC.hXy(), jC.hwb());
 			this.u("rclick", this.hMg, this)
 		}
-	hn.prototype = new DockPanel("");
-	hn.prototype.Pk = function () {
+	LayersPan.prototype = new DockPanel("");
+	LayersPan.prototype.Pk = function () {
 			return new C(253, 0)
 		};
-	hn.prototype.$d = function (O) {
+	LayersPan.prototype.$d = function (O) {
 			var s = O.target.RH(),
 				k = s[0],
 				G;
@@ -73759,7 +73759,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 			H.R = T.LR;
 			O.target.k(H)
 		};
-	hn.prototype.hMg = function (O) {
+	LayersPan.prototype.hMg = function (O) {
 			var s = this.ox,
 				k = O.data,
 				A;
@@ -73795,7 +73795,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 				};
 			this.k(H)
 		};
-	hn.prototype.a = function () {
+	LayersPan.prototype.a = function () {
 			DockPanel.prototype.a.call(this);
 			this.CD.a();
 			this.k$.a();
@@ -73808,7 +73808,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 				k.Wm(V.DW(O[s]))
 			}
 		};
-	hn.prototype.md = function (O, s) {
+	LayersPan.prototype.md = function (O, s) {
 			if (O == null) V.Vo(this.$T, "disabled");
 			else V.py(this.$T, "disabled");
 			this.ox = O;
@@ -73843,44 +73843,44 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 				this.yU.U(Math.round(100 * (k.add.iOpa != null ? k.add.iOpa / 255 : 1)))
 			}
 		};
-	hn.prototype.HQ = function (O, s) {
+	LayersPan.prototype.HQ = function (O, s) {
 			var k = this.tH.getBoundingClientRect().height;
 			k = Math.max(k, 52);
 			if (k > 68) k = Math.max(k, 76);
 			var G = s - (k + 34);
 			this.sr.style.height = G + "px"
 		};
-	hn.prototype.hMb = function (O) {
+	LayersPan.prototype.hMb = function (O) {
 			this.dv({
 				S: _.HF,
 				Wv: this.CD.B()
 			})
 		};
-	hn.prototype.hMa = function (O) {
+	LayersPan.prototype.hMa = function (O) {
 			this.dv({
 				S: _.HX,
 				Wv: Math.round(255 * this.k$.B() / 100)
 			})
 		};
-	hn.prototype.hZo = function (O) {
+	LayersPan.prototype.hZo = function (O) {
 			this.dv({
 				S: _.Kp,
 				Wv: [this.da.B(), [1, 2, 31]]
 			})
 		};
-	hn.prototype.hZC = function (O) {
+	LayersPan.prototype.hZC = function (O) {
 			this.dv({
 				S: _.pg,
 				Wv: Math.round(255 * this.yU.B() / 100)
 			})
 		};
-	hn.prototype.hZi = function (O) {
+	LayersPan.prototype.hZi = function (O) {
 			this.hjH(O, this.gg)
 		};
-	hn.prototype.hZg = function (O) {
+	LayersPan.prototype.hZg = function (O) {
 			this.hjH(O, this.hKQ)
 		};
-	hn.prototype.hjH = function (O, s) {
+	LayersPan.prototype.hjH = function (O, s) {
 			var k = O.currentTarget;
 			if (V.Pf(s.j)) return;
 			O.stopPropagation();
@@ -73898,38 +73898,38 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 			};
 			this.k(A)
 		};
-	hn.prototype.hQY = function (O) {
+	LayersPan.prototype.hQY = function (O) {
 			this.dv({
 				S: _.hXt
 			})
 		};
-	hn.prototype.hQI = function (O) {
+	LayersPan.prototype.hQI = function (O) {
 			this.dv({
 				S: _.pS
 			})
 		};
-	hn.prototype.hQL = function (O) {
+	LayersPan.prototype.hQL = function (O) {
 			this.dv({
 				S: _.Fu
 			})
 		};
-	hn.prototype.hNu = function (O) {
+	LayersPan.prototype.hNu = function (O) {
 			this.dv({
 				S: _.Gc
 			})
 		};
-	hn.prototype.hNM = function (O) {
+	LayersPan.prototype.hNM = function (O) {
 			this.dv({
 				S: _.od
 			})
 		};
-	hn.prototype.dv = function (O) {
+	LayersPan.prototype.dv = function (O) {
 			var s = new d(V.E.H, !0);
 			s.data = O;
 			s.R = T.LR;
 			this.k(s)
 		};
-	hn.prototype.Oy = function () {
+	LayersPan.prototype.Oy = function () {
 			var O = [
 				[6, 54, 0],
 				[11, 6],
@@ -73960,7 +73960,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 					}
 				}
 		};
-	hn.prototype.hNr = function (O) {
+	LayersPan.prototype.hNr = function (O) {
 			mS.Qi(O);
 			var s = 0,
 				k = this.o_;
@@ -74109,7 +74109,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 				}
 			if (A.pC()) {
 					j.addEventListener("contextmenu", z, !1);
-					var F = new hn.Sm(mB.get([12, 1]), "sm", "layerstyle", O.depth, 0, null);
+					var F = new LayersPan.Sm(mB.get([12, 1]), "sm", "layerstyle", O.depth, 0, null);
 					F.parent = this;
 					j.appendChild(F.j);
 					var Z = A.add.lmfx,
@@ -74120,7 +74120,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 							if (K.length == 0) continue;
 							for (var N = 0; N < K.length;
 							N++) {
-								var F = new hn.Sm(mB.get(nv.names[t]), "s", "layerstyle", O.depth, 1, [t, N]);
+								var F = new LayersPan.Sm(mB.get(nv.names[t]), "s", "layerstyle", O.depth, 1, [t, N]);
 								F.sk(D && K[N].v.enab.v);
 								F.parent = this;
 								j.appendChild(F.j)
@@ -74128,7 +74128,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 						}
 				}
 			if (A.LM()) {
-					var F = new hn.Sm(mB.get([12, 55]), "fm", null, O.depth, 0, -1, A.GI(k).$ ? this.Ax : null);
+					var F = new LayersPan.Sm(mB.get([12, 55]), "fm", null, O.depth, 0, -1, A.GI(k).$ ? this.Ax : null);
 					F.parent = this;
 					j.appendChild(F.j);
 					this.hJn = F.j;
@@ -74146,7 +74146,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 							if (mV.names[u]) v = mB.get(mV.names[u]);
 							if (mu.names[u]) v = mB.get(mu.names[u]);
 							var w = S[u] ? "afw_" + u : null,
-								F = new hn.Sm(v, "f", w, O.depth, 1, t);
+								F = new LayersPan.Sm(v, "f", w, O.depth, 1, t);
 							F.sk(D && n.enab.v);
 							F.parent = this;
 							j.appendChild(F.j)
@@ -74392,11 +74392,11 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 						j = new d(V.E.Hv, !0);
 					if (k == 0 && (mu.get(H.add) || H.add.SoCo || H.add.GdFl || H.add.PtFl)) e.data = {
 							S: V.A.dD,
-							GF: DockPanel.tt.Pg
+							GF: DockPanel.dcNumbers.Pg
 						};
 					else if (k != 0 && k != -1) e.data = {
 							S: V.A.dD,
-							GF: DockPanel.tt.Pg
+							GF: DockPanel.dcNumbers.Pg
 						};
 					else if (k == 0 && H.add.SoLd) j.data = {
 							jn: "placedLayerEditContents",
@@ -74473,7 +74473,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 			s.R = T.LR;
 			this.k(s)
 		};
-	hn.Sm = function (O, s, k, G, A, H, e) {
+	LayersPan.Sm = function (O, s, k, G, A, H, e) {
 			mI.call(this);
 			this.hJu = s;
 			this.hT = k;
@@ -74504,8 +74504,8 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 			}
 			this.j.addEventListener("click", this.Pt.bind(this), !1)
 		};
-	hn.Sm.prototype = new mI;
-	hn.Sm.prototype.df = function (O) {
+	LayersPan.Sm.prototype = new mI;
+	LayersPan.Sm.prototype.df = function (O) {
 			O.stopPropagation();
 			O.dataTransfer.setData("Text", JSON.stringify({
 				hA: this.hJu,
@@ -74513,11 +74513,11 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 				LO: this.index
 			}))
 		};
-	hn.Sm.prototype.dH = function (O) {
+	LayersPan.Sm.prototype.dH = function (O) {
 			mS.Qi(O);
 			this.ka()
 		};
-	hn.Sm.prototype.Rl = function (O) {
+	LayersPan.Sm.prototype.Rl = function (O) {
 			mS.Qi(O);
 			this.ka();
 			var s = O.dataTransfer.getData("Text");
@@ -74525,23 +74525,23 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 			var s = JSON.parse(s);
 			mS.h_a(O, s, this.parent, this.index + (mS.Lp(O, this.tH) > .5 ? 0 : 1))
 		};
-	hn.Sm.prototype.dp = function (O) {
+	LayersPan.Sm.prototype.dp = function (O) {
 			mS.Qi(O);
 			var s = mS.Lp(O, this.tH) > .5;
 			this.ka();
 			var k = "border-" + (s ? "bottom" : "top");
 			this.tH.style[k] = "0.2em solid rgba(0,0,0,0.5)"
 		};
-	hn.Sm.prototype.ka = function (O) {
+	LayersPan.Sm.prototype.ka = function (O) {
 			this.tH.style.border = "none"
 		};
-	hn.Sm.prototype.sk = function (O) {
+	LayersPan.Sm.prototype.sk = function (O) {
 			var s = 15;
 			if (1 < V.L() && V.L() < 1.5) s = s / V.L();
 			this.yx.setAttribute("style", "background-size: " + s + "px " + s + "px;");
 			this.yx.style.opacity = O ? 1 : .2
 		};
-	hn.Sm.prototype.Pt = function (O) {
+	LayersPan.Sm.prototype.Pt = function (O) {
 			if (O.target == this.yx) return;
 			if (O.detail != 1 && this.hT != null) {
 				var s = new d(V.E.b, !0);
@@ -74562,7 +74562,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 				this.k(s)
 			}
 		};
-	hn.Sm.prototype.hha = function (O) {
+	LayersPan.Sm.prototype.hha = function (O) {
 			var s = {
 				fm: _.Yt,
 				f: _.jB,
@@ -74577,7 +74577,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 		};
 
 	function ha() {
-			DockPanel.call(this, "Guide Guy", !1, null, DockPanel.tt.hCG);
+			DockPanel.call(this, "Guide Guy", !1, null, DockPanel.dcNumbers.hCG);
 			this.QL = null;
 			this.sV = [];
 			var O = V.z("div", "form padded");
@@ -74757,7 +74757,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 		};
 
 	function hx() {
-			DockPanel.call(this, [9, 2], !1, null, DockPanel.tt.Pg);
+			DockPanel.call(this, [9, 2], !1, null, DockPanel.dcNumbers.Pg);
 			this.hJV = null;
 			this.ps = null;
 			this.TM = null;
@@ -76027,7 +76027,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 		};
 
 	function YP() {
-			DockPanel.call(this, [9, 7], !1, null, DockPanel.tt.hWR);
+			DockPanel.call(this, [9, 7], !1, null, DockPanel.dcNumbers.hWR);
 			this.$T.setAttribute("style", "min-width:240px;");
 			this.ps = null;
 			this.yi = -1;
@@ -76172,7 +76172,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 		};
 
 	function jR() {
-			DockPanel.call(this, [9, 11], !1, null, DockPanel.tt.hCO);
+			DockPanel.call(this, [9, 11], !1, null, DockPanel.dcNumbers.hCO);
 			var O = V.z("div", "padded");
 			O.setAttribute("style", "min-width:15em");
 			this.$T.appendChild(O);
@@ -76279,7 +76279,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 	jZ.prototype = new DockPanel("");
 
 	function hr() {
-			DockPanel.call(this, [9, 12], !1, null, DockPanel.tt.Lj);
+			DockPanel.call(this, [9, 12], !1, null, DockPanel.dcNumbers.Lj);
 			this.TM = null;
 			this.FB = new Oe(T.TY);
 			this.FB.parent = this;
@@ -81030,7 +81030,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 				var Y = new d(V.E.b);
 				Y.data = {
 						S: V.A.dD,
-						GF: DockPanel.tt.hID
+						GF: DockPanel.dcNumbers.hID
 					};
 				Y.data = {
 						S: V.A.wW,
@@ -82213,7 +82213,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 			Js: 2
 		},
 		{
-			Fx: new hn, // LayersPan
+			Fx: new LayersPan, // LayersPan
 			Js: 1
 		},
 		{
