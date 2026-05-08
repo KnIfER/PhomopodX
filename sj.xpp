@@ -59956,7 +59956,6 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 					var opacity = 1;
 					if (j) p.setAttribute("src", s.hR);
 					else {
-						console.log('hR::', hR, s);
 							p.width = H;
 							p.height = e;
 							var Y = p.getContext("2d"),

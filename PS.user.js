@@ -266,6 +266,10 @@ html,body{
 			stopX(e)
 			switch_tool(26)
 		}
+		if(e.code==='KeyW'){
+			stopX(e)
+			switch_tool(8)
+		}
 	}, true);
 	
 	
