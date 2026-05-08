@@ -59953,15 +59953,34 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 						e = s.F.p,
 						j = typeof s.hR == "string",
 						p = j ? this.hq$ : this.Cr;
+					var opacity = 1;
 					if (j) p.setAttribute("src", s.hR);
 					else {
+						console.log('hR::', hR, s);
 							p.width = H;
 							p.height = e;
 							var Y = p.getContext("2d"),
 								M = new ImageData(new Uint8ClampedArray(s.hR.buffer), H, e);
 							Y.putImageData(M, 0, 0)
+							// 检测画布中间像素
+							
+							var centerX = Math.floor(H / 2);
+							var centerY = Math.floor(e / 2);
+
+							// 方法1: 使用 getImageData 获取中间像素
+							var centerPixel = Y.getImageData(centerX, centerY, 1, 1);
+							var r = centerPixel.data[0];
+							var g = centerPixel.data[1];
+							var b = centerPixel.data[2];
+							var a = centerPixel.data[3];
+							
+							if(r==255) {
+								opacity = 0.15;
+							}
+							// console.log(`中心像素 (${centerX}, ${centerY}): RGBA(${r}, ${g}, ${b}, ${a})`);
 						}
-					p.setAttribute("style", " position:absolute; pointer-events:none;user-select:none;" + "top:" + (A.y - s.tf.y / G) + "px; left:" + (A.x - s.tf.x / G) + "px; width:" + H / G + "px; height:" + e / G + "px");
+						// brush 鼠标指针
+					p.setAttribute("style", "opacity:"+opacity+"; position:absolute; pointer-events:none;user-select:none;" + "top:" + (A.y - s.tf.y / G) + "px; left:" + (A.x - s.tf.x / G) + "px; width:" + H / G + "px; height:" + e / G + "px");
 					var h = this.Xv;
 					if (h == null || h != p) {
 							if (h) this.sr.removeChild(h);
@@ -75350,13 +75369,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 				G = s.s.p,
 				A = W.LT;
 			this.s.clearRect(0, 0, s.s.n, s.s.p);
-			var H = this.hed(O);
 			if (s.Id == null) s.Id = new W.nj(s.s.n, s.s.p);
-			if (H) s.Id.set(this.RE);
-			else {
-					W.ds(s.Id);
-					W.Vi(0)
-				}
 			var e = new L(0, 0, O.n * s.o, O.p * s.o);
 			e.x = Math.round((k - O.n * s.o) / 2 + s.C.x);
 			e.y = Math.round((G - O.p * s.o) / 2 + s.C.y);
@@ -75381,7 +75394,18 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 			W.lh(k, G);
 			j.yg();
 			j.fj(s.Id.nL, O.OQ.nL, new Float32Array([e.x / k, e.y / G, e.n / k, e.p / G]), new Float32Array([8 / k, 8 / G]), O.n, O.p, 1 / O.K.o, k, G, new Float32Array(Y), new Float32Array(p), new Float32Array(g.TV.UU(g.TV.OG(s.VA))));
+			
+			
+			var H = this.hed(O);
+			if (H) s.Id.set(this.RE);
+			else {
+					W.ds(s.Id);
+					W.Vi(0)
+				}
+				
 			A.drawArrays(A.TRIANGLES, 0, 6)
+			
+			
 		};
 	ex.hNy = function (O) {
 			var s = O.add.artd;
@@ -75557,6 +75581,13 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 				}
 		};
 	ex.prototype.hjB = function (O, s, k) {
+		// setTimeout(() => {
+				 this.hjB_tm(O, s, k)
+		// }, 250);
+		return 1
+	}
+	ex.prototype.hjB_tm = function (O, s, k) {
+		// if(1)return // 调大小
 			var G = O.I.xO || O.I.jm || O.I.Ya || O.I.up.length != 0 || O.I.fa.length != 0,
 				A = this.WO,
 				H = A.Px,
