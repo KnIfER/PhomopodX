@@ -32375,7 +32375,7 @@ addEvent('contextmenu', e=>{
 			return O.Fi && s.m(l.sH)
 		};
 	T.Tg.prototype.Zg = function (O, s, k, G, A) {
-			if (G.m(l.Rc)) {
+			if (G.m(l.ALT_KEYS)) {
 				this.Gf = new C(A.x, A.y);
 				var H = this.ol.brush.Brsh.v,
 					e = H.Dmtr.v.val,
@@ -32663,7 +32663,7 @@ addEvent('contextmenu', e=>{
 		};
 	T.Tg.prototype.FV = function (O, s, k, G) {
 			var A = this.ol.brush,
-				H = G.m(l.Rc),
+				H = G.m(l.ALT_KEYS),
 				e = H != this.Dm,
 				j = T.Tg.BT(A, G);
 			if (j != null) this.Bl(j);
@@ -32735,7 +32735,7 @@ addEvent('contextmenu', e=>{
 			if (O.jP.list.length == 0) return;
 			var A = this.id,
 				H;
-			if ((A == T.QK || A == T.vy || A == T.TY || A == T.Qo) && s != null && s.m(l.Rc)) H = "crosshair";
+			if ((A == T.QK || A == T.vy || A == T.TY || A == T.Qo) && s != null && s.m(l.ALT_KEYS)) H = "crosshair";
 			else {
 					var e = this.Dj,
 						j = this.ol.brush,
@@ -32840,7 +32840,7 @@ addEvent('contextmenu', e=>{
 				}
 		};
 	T.Tg.prototype.QA = function (O, s, k) {
-			if (O.m(l.Rc)) {
+			if (O.m(l.ALT_KEYS)) {
 				var G = new d(V.E.H, !0);
 				G.R = T.ny;
 				G.data = {
@@ -33910,7 +33910,7 @@ addEvent('contextmenu', e=>{
 			this.XT = s;
 			this.Df = !1;
 			this.Qg = G.m(l.sH);
-			this.Dm = G.m(l.Rc);
+			this.Dm = G.m(l.ALT_KEYS);
 			this.uc = this.Qg ? 0 : 1;
 			this.FQ = this.Dm ? 0 : 1;
 			this.CQ = O.K.VU(A.x, A.y);
@@ -34008,7 +34008,7 @@ addEvent('contextmenu', e=>{
 		};
 	T.jU.prototype.FV = function (O, s, k, G) {
 			var A = G.m(l.sH),
-				H = G.m(l.Rc);
+				H = G.m(l.ALT_KEYS);
 			if (this.Df) {
 					if (this.uc == 0 && !A) this.uc++;
 					if (this.uc == 1 && A) this.uc++;
@@ -34200,7 +34200,7 @@ addEvent('contextmenu', e=>{
 		};
 	T.iz.prototype = new T.Tg;
 	T.iz.prototype.uo = function (O, s, k, G, A) {
-			var H = G.m(l.Rc) ? mt.AD : mt.vM;
+			var H = G.m(l.ALT_KEYS) ? mt.AD : mt.vM;
 			this.LX(O, k, G, A, this.ol.strn, H);
 			if (this.BI == null) return;
 			this.Rx(O)
@@ -34316,7 +34316,7 @@ addEvent('contextmenu', e=>{
 		};
 	T.fO.prototype = new T.Tg;
 	T.fO.prototype.uo = function (O, s, k, G, A) {
-			if (G.m(l.Rc) || G.m(l.rY)) {
+			if (G.m(l.ALT_KEYS) || G.m(l.rY)) {
 				this.zC = O.K.VU(A.x, A.y);
 				this.C = null;
 				return
@@ -35260,7 +35260,7 @@ addEvent('contextmenu', e=>{
 				k.K.VA = O.VA;
 				k.nn = !0
 			}
-			if (H == "scroll" && !G.m(l.Rc)) {
+			if (H == "scroll" && !G.m(l.ALT_KEYS)) {
 				if (G.m(l.AM)) T.wf.fQ(k, k.K.C.x - O.zS.y, k.K.C.y - O.zS.x);
 				else T.wf.fQ(k, k.K.C.x - O.zS.x, k.K.C.y - O.zS.y)
 			}
@@ -36264,7 +36264,7 @@ addEvent('contextmenu', e=>{
 			this.j_ = G;
 			var A = this.xW;
 			if (!G.Fi) {
-				if (this.xW != null && this.FQ > 1 && k.m(l.Rc)) {
+				if (this.xW != null && this.FQ > 1 && k.m(l.ALT_KEYS)) {
 					A.Y.pop();
 					A.Y.pop();
 					A.Y.push(this.$z.x, this.$z.y);
@@ -36289,11 +36289,11 @@ addEvent('contextmenu', e=>{
 		};
 	T.SE.prototype.FV = function (O, s, k, G) {
 			T.jU.prototype.FV.call(this, O, s, k, G);
-			if (this.xW && this.FQ > 1 && this.j_ && !this.j_.Fi && !G.m(l.Rc)) this.Rw(O, k, G)
+			if (this.xW && this.FQ > 1 && this.j_ && !this.j_.Fi && !G.m(l.ALT_KEYS)) this.Rw(O, k, G)
 		};
 	T.SE.prototype.HM = function (O, s, k, G) {
 			this.j_ = G;
-			if (this.FQ > 1 && k.m(l.Rc)) {
+			if (this.FQ > 1 && k.m(l.ALT_KEYS)) {
 				var A = this.xW;
 				A.d.push("L");
 				A.Y.push(this.$z.x, this.$z.y);
@@ -36841,7 +36841,7 @@ addEvent('contextmenu', e=>{
 							return
 						}
 					}
-					if (k.m(l.Rc) && !p) {
+					if (k.m(l.ALT_KEYS) && !p) {
 						var c = new d(V.E.H);
 						c.R = T.LR;
 						c.data = {
@@ -36872,7 +36872,7 @@ addEvent('contextmenu', e=>{
 						return
 					}
 					var I = O.W[O.v[0]],
-						Q = k.m(l.Rc);
+						Q = k.m(l.ALT_KEYS);
 					this.S = 1;
 					var b = O.history[O.We];
 					if (b.R == this && b.data.S == 1 && b.data.r == O.v[0] && I.wq == I.TC.wq && !Q) {
@@ -37595,7 +37595,7 @@ addEvent('contextmenu', e=>{
 				this.RV = null
 			}
 			if (this.ZI) {
-				var e = T.jU.Gx(this.ol.setop, G.m(l.sH), G.m(l.Rc)),
+				var e = T.jU.Gx(this.ol.setop, G.m(l.sH), G.m(l.ALT_KEYS)),
 					j = new d(V.E.Hv, !0);
 				if (this.xW.Y.length <= 4) j.data = T.jU.oV();
 				else j.data = T.jU.SH(this.xW.Y, e);
@@ -37614,7 +37614,7 @@ addEvent('contextmenu', e=>{
 		};
 	T.DG.prototype.Iw = function (O, s) {
 			var k = "auto;";
-			if (s != null && s.m(l.sH) && !s.m(l.Rc) || this.ol.setop == "union") k = "copy";
+			if (s != null && s.m(l.sH) && !s.m(l.ALT_KEYS) || this.ol.setop == "union") k = "copy";
 			var G = new d(V.E.b, !0);
 			G.data = {
 				S: V.A.FF,
@@ -37687,7 +37687,7 @@ addEvent('contextmenu', e=>{
 				H = A.Y,
 				e = H.length - 2,
 				j = this.$z;
-			if (this.FQ > 1 && k.m(l.Rc) && G.Fi) {
+			if (this.FQ > 1 && k.m(l.ALT_KEYS) && G.Fi) {
 					H.push(0, 0);
 					A.d.push("L");
 					e += 2
@@ -38032,7 +38032,7 @@ addEvent('contextmenu', e=>{
 	T.DT.prototype = new T.Tg;
 	T.DT.prototype.uo = function (O, s, k, G, A) {
 			var H = this.ol.pdetail ? mt.AD : mt.SN;
-			if (G.m(l.Rc)) H = mt.vM;
+			if (G.m(l.ALT_KEYS)) H = mt.vM;
 			this.LX(O, k, G, A, this.ol.strn, H);
 			if (this.BI == null) return;
 			this.Rx(O)
@@ -38311,8 +38311,8 @@ addEvent('contextmenu', e=>{
 			k.rn = !0
 		};
 	T.oT.prototype.FV = function (O, s, k, G) {
-			if (this.UG != G.m(l.Rc)) {
-				this.UG = G.m(l.Rc);
+			if (this.UG != G.m(l.ALT_KEYS)) {
+				this.UG = G.m(l.ALT_KEYS);
 				var A = {
 					S: V.A.rb,
 					R: this.id,
@@ -38835,7 +38835,7 @@ addEvent('contextmenu', e=>{
 						j = j > H ? H + c : H - c;
 						p = p > e ? e + c * Y : e - c * Y
 					}
-					if (k && k.m(l.Rc)) {
+					if (k && k.m(l.ALT_KEYS)) {
 						H -= j - H;
 						e -= p - e
 					}
@@ -38965,7 +38965,7 @@ addEvent('contextmenu', e=>{
 						UN: e.clone()
 					});
 					h.Lr = [Q + 2 + z.xk]
-				} else if (E[0].length == 1 && G.m(l.Rc)) {
+				} else if (E[0].length == 1 && G.m(l.ALT_KEYS)) {
 					var b = E[0],
 						R = h.l.length - 1,
 						m = h.l[b];
@@ -39040,7 +39040,7 @@ addEvent('contextmenu', e=>{
 						z.UN.x = z.q.x + i * (e.x - z.q.x);
 						z.UN.y = z.q.y + i * (e.y - z.q.y)
 					} else z.UN = e;
-					if (G.m(l.Rc)) z.type = 5;
+					if (G.m(l.ALT_KEYS)) z.type = 5;
 					else {
 						z.type = 4;
 						z.fE = z.q.add(z.q.At(e))
@@ -39154,7 +39154,7 @@ addEvent('contextmenu', e=>{
 				if (this.gX == null) {
 					this.gX = this.rr = e.add.vmsk.clone();
 					this.IC = this.rk = JSON.stringify(e.add.vogk);
-					if (G.m(l.Rc)) {
+					if (G.m(l.ALT_KEYS)) {
 						var j = this.gX.clone(),
 							p = JSON.parse(this.IC),
 							Y = T.Vl.KP(j, p);
@@ -40900,7 +40900,7 @@ addEvent('contextmenu', e=>{
 						this.Ha = T.TZ.Mc(j, O.LL);
 						this.Xd = [];
 						for (var M = 0; M < O.LL.length; M++) this.Xd.push(T.TZ.uF(j, O.LL[M]));
-						if (G.m(l.Rc)) {
+						if (G.m(l.ALT_KEYS)) {
 							var h = j.slice(0),
 								c = O.LL,
 								z = [];
@@ -41303,7 +41303,7 @@ addEvent('contextmenu', e=>{
 			if (this.ne == -1) return;
 			this.Ag = G;
 			var A = k.m(l.sH),
-				H = k.m(l.Rc),
+				H = k.m(l.ALT_KEYS),
 				e = k.m(l.AM),
 				j = O.K.o,
 				p = this.zr,
@@ -41805,7 +41805,7 @@ addEvent('contextmenu', e=>{
 				}
 			if (H == _.FG) {
 					var m = [];
-					if (G.m(l.Rc)) {
+					if (G.m(l.ALT_KEYS)) {
 						var P = k.uJ(),
 							X = P ? P.data : null;
 						if (P != null && P.R == this && X.S == _.FG && X.fA.length != 1) {
@@ -41884,7 +41884,7 @@ addEvent('contextmenu', e=>{
 								}
 							};
 							n = e
-						} else if (G.m(l.sH) && !G.m(l.Rc) && O.Zm > 0) {
+						} else if (G.m(l.sH) && !G.m(l.ALT_KEYS) && O.Zm > 0) {
 							H = O.Zm == 1 ? _.rg : O.Zm == 2 ? _.ob : _.hg;
 							escape = !0
 						} else if ((G.m(l.sH) || O.hUt == 1) && k.v.length > 0) {
@@ -43025,7 +43025,7 @@ addEvent('contextmenu', e=>{
 							k.add.lnk2.splice(k.add.lnk2.indexOf(Og), 1);
 							delete Yy.add.SoLd
 						}
-					var Od = G.m(l.Rc),
+					var Od = G.m(l.ALT_KEYS),
 						jq = -1;
 					if (O.LP && O.LP.Dplc && O.LP.Dplc.v) Od = !0;
 					if (Od && H == _.pD) {
@@ -43252,7 +43252,7 @@ addEvent('contextmenu', e=>{
 			if (H == _.K$ || H == _.HC) {
 					var OJ = H == _.K$ ? O.source : k.v[0],
 						Ox, OV, Um = k.v.indexOf(OJ) != -1,
-						hP = G.m(l.Rc) | O.hWM,
+						hP = G.m(l.ALT_KEYS) | O.hWM,
 						Y$;
 					if (Um) Y$ = k.BC();
 					else Y$ = k.jl(OJ);
@@ -43399,7 +43399,7 @@ addEvent('contextmenu', e=>{
 			if (H == _.hXt) {
 					if (k.v.length != 1) return;
 					var B = k.v[0],
-						Ut = G.m(l.Rc);
+						Ut = G.m(l.ALT_KEYS);
 					if (k.W[B].Vc() == null) {
 							H = _.ZU;
 							O.MJ = k.h ? !Ut ? "RvlS" : "HdSl" : !Ut ? "RvlA" : "HdAl"
@@ -45574,13 +45574,13 @@ addEvent('contextmenu', e=>{
 			oO: "Ctrl",
 			sA: "ControlLeft ControlRight MetaLeft MetaRight OSLeft OSRight".split(" ")
 		};
-	l.Rc = {
+	l.ALT_KEYS = {
 			oO: "Alt",
 			sA: ["AltLeft", "AltRight"] // altkey
 		};
 	l.hd$ = {
 			oO: "CtrlOrAlt",
-			sA: l.AM.sA.concat(l.Rc.sA)
+			sA: l.AM.sA.concat(l.ALT_KEYS.sA)
 		};
 	l.uK = {
 			oO: "Escape",
@@ -62224,7 +62224,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 			return j
 		};
 
-	function er(O, s) {
+	function CurveEditor(O, s) {
 			mI.call(this);
 			this.j = V.z("span", "fitem curveeditor");
 			this.Tb = null;
@@ -62245,8 +62245,8 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 			this.j.appendChild(this.TQ);
 			V.PS(this.TQ, this.kU.bind(this))
 		}
-	er.prototype = new mI;
-	er.prototype.U = function (O, s) {
+	CurveEditor.prototype = new mI;
+	CurveEditor.prototype.U = function (O, s) {
 			var k = JSON.stringify(O);
 			if (k == JSON.stringify(this.jc)) return;
 			this.mode = O.length == 256 ? 1 : 0;
@@ -62254,19 +62254,19 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 			if (s != null) this.UR = this.jc[s];
 			this._x()
 		};
-	er.prototype.yE = function (O, s, k) {
+	CurveEditor.prototype.yE = function (O, s, k) {
 			this.Tb = O;
 			this.hUY = s;
 			this.as = k;
 			this._x()
 		};
-	er.prototype.B = function () {
+	CurveEditor.prototype.B = function () {
 			return JSON.parse(JSON.stringify(this.jc))
 		};
-	er.prototype.heW = function () {
+	CurveEditor.prototype.heW = function () {
 			return this.jc.indexOf(this.UR)
 		};
-	er.prototype.kU = function (O) {
+	CurveEditor.prototype.kU = function (O) {
 			var s = V.kZ(O, this.TQ),
 				k = s.x,
 				G = 256 - s.y;
@@ -62284,7 +62284,8 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 							p = j.Hrzn.v - k,
 							Y = j.Vrtc.v - G,
 							M = Math.sqrt(p * p + Y * Y);
-						if (M < 5) H = this.jc[e]
+						// if (M < 15) H = this.jc[e] // 抓住手柄判定 15
+						if (M < 35) H = this.jc[e] // 抓住手柄判定 15
 					}
 					if (H == null) {
 						H = g.fv.Zq(k, G, !0);
@@ -62296,7 +62297,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 			V.I_(document.body, this.Lk);
 			this.DZ(O)
 		};
-	er.prototype.DZ = function (O) {
+	CurveEditor.prototype.DZ = function (O) {
 			var s = V.kZ(O, this.TQ),
 				k = s.x,
 				G = 256 - s.y;
@@ -62353,12 +62354,12 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 			this._x();
 			this.k(new d(V.E.c))
 		};
-	er.prototype.kb = function (O) {
+	CurveEditor.prototype.kb = function (O) {
 			V.bT(document.body, this.Li);
 			V.Ez(document.body, this.Lk);
 			this.k(new d(V.E.c))
 		};
-	er.prototype._x = function () {
+	CurveEditor.prototype._x = function () {
 			var O = this.Fg;
 			O.fillStyle = "#ffffff";
 			O.fillRect(0, 0, 256, 256);
@@ -65510,7 +65511,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 		};
 	S["Shr "] = function () {
 			S.call(this, "Shr ");
-			this.Pn.push(new er(!0, !0));
+			this.Pn.push(new CurveEditor(!0, !0));
 			this.Pn.push(new mH([24, 18, 0], [
 				[24, 18, 3],
 				[24, 18, 2]
@@ -65987,7 +65988,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 			this.k(k)
 		};
 	S.LqFy.prototype.FV = function (O) {
-			this.Dm = O.m(l.Rc);
+			this.Dm = O.m(l.ALT_KEYS);
 			var s = T.Tg.BT(this.rW, O);
 			if (s != null) {
 				this.rW = s;
@@ -66427,7 +66428,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 			this.Tf = new mH(null, ["Spline", "Sketch"]);
 			this.Tf.u(V.E.c, this.hKb, this);
 			O.appendChild(this.Tf.j);
-			this.it = new er;
+			this.it = new CurveEditor;
 			this.it.u(V.E.c, this.wP, this);
 			O.appendChild(this.it.j);
 			this.JZ = new UX("Sample from image", [0, 1, 2]);
@@ -67769,7 +67770,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 			if (s.RQ == null) {
 					this.it.U(M, H, e, j, Y, A);
 					if (mu.names[this.gF]) {
-						if (G.m(l.Rc) && this.$e) this.it.U(this.$e);
+						if (G.m(l.ALT_KEYS) && this.$e) this.it.U(this.$e);
 						var h = mm.TW.getData(O),
 							c = g.Oi(h[0].Za);
 						this.it.yE(c)
@@ -68354,7 +68355,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 			this.body.appendChild(this.FC);
 			var O = V.z("div", "bordered padded vmargin");
 			this.PQ.appendChild(O);
-			this.it = new er;
+			this.it = new CurveEditor;
 			this.it.u(V.E.c, this.wP, this);
 			O.appendChild(this.it.j);
 			this.hS = new md("OK", !0, null, !0);
@@ -79751,7 +79752,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 			this.u(V.E.H, this.Jc, this);
 			this.u(V.E.Hv, this.hFR, this);
 			this.u(V.E.b, this.hOm, this);
-			document.body.addEventListener("keydown", this.JP.bind(this), !1);
+			document.body.addEventListener("keydown", this.onKeyDown.bind(this), !1);
 			window.addEventListener("keyup", this.VC.bind(this), !1);
 			window.addEventListener("resize", this.vP.bind(this), !1);
 			window.addEventListener("paste", this.hGs.bind(this), !1);
@@ -81303,7 +81304,6 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 					this.jL.jV = null;
 					H.disable(A, this, k, s)
 				}
-				console.log('鼠标滚轮::', O, s); // key down up
 			if (O.action == "scroll") { // 鼠标滚轮
 					var Y = new d(V.E.H, !0),
 						M = O.zS.clone();
@@ -81383,10 +81383,10 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 	eh.prototype.hNO = function (O) {
 			var s = O.code,
 				k = l.Lu;
-			return !k(s, l.uK) && !k(s, l.AM) && !k(s, l.Rc)
+			return !k(s, l.uK) && !k(s, l.AM) && !k(s, l.ALT_KEYS)
 		};
-	eh.prototype.JP = function (O) {
-			console.log('键盘监听::', O);
+	eh.prototype.onKeyDown = function (O) {
+			// console.log('键盘监听::', O);
 			window.keyEvent = O
 			var s = O.target.tagName.toLowerCase(),
 				k = l.Lu(O.code, l.Ca);
@@ -81411,9 +81411,8 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 			}
 			this.FV("up")
 		};
-    //事件绑定
 	eh.prototype.FV = function (O) {
-		console.log('事件绑定::', O); // key down up
+			// console.log('事件绑定::', O); // key down up
 			var s = this.pz,
 				k = this.og(),
 				G = k != null && k.v.length != 0;
@@ -81425,7 +81424,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 				}
 			this.hoY();
 			var A = this.Ud(l.AM),
-				H = s.m(l.Rc),
+				H = s.m(l.ALT_KEYS),
 				e = s.m(l.sH);
 			if (A && s.m(l.Ho) && O == "down") {
 					var j = new d(V.E.H),
