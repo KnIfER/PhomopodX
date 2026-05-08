@@ -43222,7 +43222,7 @@ addEvent('contextmenu', e=>{
 							var OP = new d(V.E.b);
 							OP.data = {
 								S: V.A.dD,
-								GF: mM.tt.Pg
+								GF: DockPanel.tt.Pg
 							};
 							s.k(OP)
 						}
@@ -71716,7 +71716,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 			return this.hZy.clone()
 		};
 
-	function mM(O, s, k, G) {
+	function DockPanel(O, s, k, G) {
 			mI.call(this);
 			this.name = O;
 			this.hZq = k;
@@ -71742,14 +71742,14 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 			this.gC.u("select", this.ez, this);
 			this.pO.textContent = O
 		}
-	mM.prototype = new mI;
-	mM.prototype.dy = function () {
+	DockPanel.prototype = new mI;
+	DockPanel.prototype.dy = function () {
 			return null
 		};
-	mM.prototype.Pk = function () {
+	DockPanel.prototype.Pk = function () {
 			return new C(0, 0)
 		};
-	mM.prototype.a = function () {
+	DockPanel.prototype.a = function () {
 			var O = mB.get(this.name),
 				s = this.vk == 0 ? 22 : Math.round(2 + this.vk / 50),
 				k = O.length > s;
@@ -71769,24 +71769,24 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 					if (j.indexOf("\"") == -1) this.BJ.Wm("<img src=\"" + j + "\" alt=\"" + O + "\" height=\"20\" />", O)
 				}
 		};
-	mM.prototype.enable = function () {
+	DockPanel.prototype.enable = function () {
 			this.$T.setAttribute("class", "pbody")
 		};
-	mM.prototype.disable = function () {
+	DockPanel.prototype.disable = function () {
 			this.$T.setAttribute("class", "pbody disabled")
 		};
-	mM.prototype.Pr = function (O, s) {};
-	mM.prototype.md = function (O, s, k) {};
-	mM.prototype.HQ = function (O, s) {};
-	mM.prototype.oq = function (O) {
+	DockPanel.prototype.Pr = function (O, s) {};
+	DockPanel.prototype.md = function (O, s, k) {};
+	DockPanel.prototype.HQ = function (O, s) {};
+	DockPanel.prototype.oq = function (O) {
 			this.name = O;
 			this.a()
 		};
-	mM.prototype.uQ = function () {};
-	mM.prototype.hLE = function (O) {
+	DockPanel.prototype.uQ = function () {};
+	DockPanel.prototype.hLE = function (O) {
 			if (O.button == 0) this.k(new d("select", !1))
 		};
-	mM.prototype.hLl = function (O) {
+	DockPanel.prototype.hLl = function (O) {
 			O.stopPropagation();
 			O.preventDefault();
 			if (this.Cn != null && isNaN(this.Cn)) return;
@@ -71804,10 +71804,10 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 				};
 			this.k(G)
 		};
-	mM.prototype.dC = function () {
+	DockPanel.prototype.dC = function () {
 			this.ez({})
 		};
-	mM.prototype.ez = function (O) {
+	DockPanel.prototype.ez = function (O) {
 			if (O.stopPropagation) O.stopPropagation();
 			if (this.Cn != null && !isNaN(this.Cn)) {
 				var s = new d(V.E.b, !0);
@@ -71825,13 +71825,13 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 				this.k(s)
 			} else if (this.hGn()) this.k(new d(V.E.HD, !1))
 		};
-	mM.prototype.hGn = function (O) {
+	DockPanel.prototype.hGn = function (O) {
 			return !0
 		};
-	mM.prototype.uo = function (O, s, k, G, A) {};
-	mM.prototype.Md = function (O, s, k, G, A) {};
-	mM.prototype.Pt = function (O, s, k, G, A) {};
-	mM.kR = function (O, s) {
+	DockPanel.prototype.uo = function (O, s, k, G, A) {};
+	DockPanel.prototype.Md = function (O, s, k, G, A) {};
+	DockPanel.prototype.Pt = function (O, s, k, G, A) {};
+	DockPanel.kR = function (O, s) {
 			if (O.childElementCount != 0) return;
 			var k = O.textContent;
 			this.VC = this.hWh.bind(this);
@@ -71850,17 +71850,17 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 			O.addEventListener("keyup", this.VC, !1);
 			document.body.addEventListener("mousedown", this.hXk, !1)
 		};
-	mM.kR.prototype.hWh = function (O) {
+	DockPanel.kR.prototype.hWh = function (O) {
 			var s = l.Lu,
 				k = s(O.code, l.Ca);
 			if (s(O.code, l.uK) || k) this.hIB(k)
 		};
-	mM.kR.prototype.hWj = function (O) {
+	DockPanel.kR.prototype.hWj = function (O) {
 			var s = O.target;
 			if (s.tagName && s.tagName.toLowerCase() == "input") return;
 			this.hIB(!0)
 		};
-	mM.kR.prototype.hIB = function (O) {
+	DockPanel.kR.prototype.hIB = function (O) {
 			var s = this.TK;
 			s.removeEventListener("keyup", this.VC);
 			document.body.removeEventListener("mousedown", this.hXk);
@@ -71872,7 +71872,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 				s.textContent = this.hZM
 			}
 		};
-	mM.tt = {
+	DockPanel.tt = {
 			ot: "0",
 			hWO: "1",
 			LR: "2",
@@ -71894,7 +71894,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 		};
 
 	function Yt() {
-			mM.call(this, [9, 9], !1, null, mM.tt.hID);
+			DockPanel.call(this, [9, 9], !1, null, DockPanel.tt.hID);
 			this.TM = null;
 			this.kw = [0, 0];
 			this.ss = V.z("div", "padded scrollable");
@@ -71928,9 +71928,9 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 					this.PD.push(p)
 				}
 		}
-	Yt.prototype = new mM("");
+	Yt.prototype = new DockPanel("");
 	Yt.prototype.a = function () {
-			mM.prototype.a.call(this);
+			DockPanel.prototype.a.call(this);
 			for (var O = 0; O < this.PD.length; O++) this.PD[O].a()
 		};
 	Yt.prototype.hJK = function (O) {
@@ -72131,7 +72131,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 					y$: this.y$
 				};
 				this.k(k)
-			} else if (this.y$.length < 3) var G = new mM.kR(this.pO, this.Ay.bind(this))
+			} else if (this.y$.length < 3) var G = new DockPanel.kR(this.pO, this.Ay.bind(this))
 		};
 	Yt.Lg.prototype.Ay = function (O) {
 			var s = new d(V.E.c, !0);
@@ -72144,12 +72144,12 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 		};
 
 	function mk() {
-			mM.call(this, [9, 3], !1, null, mM.tt.TY);
+			DockPanel.call(this, [9, 3], !1, null, DockPanel.tt.TY);
 			this.CX = null;
 			this.aL = null;
 			this.TM = null
 		}
-	mk.prototype = new mM("");
+	mk.prototype = new DockPanel("");
 	mk.prototype.kg = function () {
 			var O = V.z("div", "");
 			this.$T.appendChild(O);
@@ -72200,7 +72200,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 			this.Pr(this.TM, ns.Dn)
 		};
 	mk.prototype.a = function () {
-			mM.prototype.a.call(this);
+			DockPanel.prototype.a.call(this);
 			if (this.PQ == null) return;
 			this.gu.a();
 			for (var O = 1; O < this.hQ.length; O++) this.hQ[O].a();
@@ -72553,7 +72553,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 		};
 
 	function YE() {
-			mM.call(this, [9, 0], !1, null, mM.tt.ot);
+			DockPanel.call(this, [9, 0], !1, null, DockPanel.tt.ot);
 			this.$T.setAttribute("style", "min-width:200px;");
 			this.sr = V.z("div", "hpbody scrollable");
 			this.sr.style.height = "160px";
@@ -72561,7 +72561,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 			this.hZH = -1;
 			this.gQ = []
 		}
-	YE.prototype = new mM("");
+	YE.prototype = new DockPanel("");
 	YE.prototype.md = function (O) {
 			V.PW(this.sr);
 			if (O == null) return;
@@ -72582,7 +72582,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 			this.sr.scrollTop = this.sr.scrollHeight
 		};
 	YE.prototype.a = function () {
-			mM.prototype.a.call(this);
+			DockPanel.prototype.a.call(this);
 			for (var O = 0; O < this.gQ.length; O++) this.gQ[O].a()
 		};
 
@@ -72614,7 +72614,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 		};
 
 	function YJ() {
-			mM.call(this, [9, 10], !1, null, mM.tt.hWX);
+			DockPanel.call(this, [9, 10], !1, null, DockPanel.tt.hWX);
 			var O = V.z("div", "padded");
 			this.$T.appendChild(O);
 			this.Tb = new Yh(256);
@@ -72634,7 +72634,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 			}
 			this.QL = null
 		}
-	YJ.prototype = new mM("");
+	YJ.prototype = new DockPanel("");
 	YJ.prototype.md = function (O) {
 			this.QL = O;
 			this.yY()
@@ -72674,7 +72674,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 			this.Tb.bZ(YO.Xg[O.xb]["--text-color"])
 		};
 	YJ.prototype.a = function () {
-			mM.prototype.a.call(this);
+			DockPanel.prototype.a.call(this);
 			this.Tb.a()
 		};
 	YJ.prototype.uQ = function () {
@@ -72682,7 +72682,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 		};
 
 	function Sepan() {
-			mM.call(this, [9, 8], !1, null, mM.tt.hWO);
+			DockPanel.call(this, [9, 8], !1, null, DockPanel.tt.hWO);
 			this.ss = V.z("div", "padded");
 			this.$T.appendChild(this.ss);
 			this.bs = new Tiaose(10); // 最近色
@@ -72694,7 +72694,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 			this.bs.u(V.E.c, this.hNw, this);
 			this.kA.u(V.E.c, this.hNw, this)
 		}
-	Sepan.prototype = new mM("");
+	Sepan.prototype = new DockPanel("");
 	Sepan.prototype.hNw = function (O) {
 			var s;
 			if (O.target == this.bs) s = this.bs.B();
@@ -72730,7 +72730,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 		};
 
 	function Yl() {
-			mM.call(this, [12, 72], !1, null, mM.tt.hCX);
+			DockPanel.call(this, [12, 72], !1, null, DockPanel.tt.hCX);
 			this.hp = null;
 			this.Fo = null;
 			this.sr = V.z("div", "lpbody scrollable");
@@ -72747,7 +72747,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 			}]);
 			this.hoD.u("select", this.$d, this)
 		}
-	Yl.prototype = new mM("");
+	Yl.prototype = new DockPanel("");
 	Yl.prototype.$d = function (O) {
 			var s = new d(V.E.b, !0);
 			s.data = {
@@ -72933,7 +72933,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 			this.sr.style.height = s - 9 - 25 + "px"
 		};
 	Yl.prototype.a = function () {
-			mM.prototype.a.call(this);
+			DockPanel.prototype.a.call(this);
 			this.ym();
 			var O = ["lrs/mask", "lrs/newlayer", "lrs/bin"];
 			for (var s = 0; s < this.o_.length; s++) {
@@ -72985,7 +72985,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 			var s = O.ctrlKey || O.metaKey,
 				k = this.hZ$;
 			if (!this.hZv && O.detail == 2 && O.target == this.wy) {
-					var G = new mM.kR(this.wy, this.Ay.bind(this))
+					var G = new DockPanel.kR(this.wy, this.Ay.bind(this))
 				} else if (s && O.target == this.LT.canvas) {
 					var A = 0;
 					if (O.shiftKey) A++;
@@ -73013,7 +73013,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 		};
 
 	function jI() {
-			mM.call(this, [8, 9], !1, null, mM.tt.TH);
+			DockPanel.call(this, [8, 9], !1, null, DockPanel.tt.TH);
 			this.hp = null;
 			this.Fo = null;
 			this.o_ = [];
@@ -73026,7 +73026,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 			this.u("click", this.dZ, this);
 			this.Oy()
 		}
-	jI.prototype = new mM("");
+	jI.prototype = new DockPanel("");
 	jI.prototype.Oy = function () {
 			var O = [
 				[5, 3],
@@ -73144,7 +73144,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 			this.sr.style.height = s - 9 - 25 + "px"
 		};
 	jI.prototype.a = function () {
-			mM.prototype.a.call(this);
+			DockPanel.prototype.a.call(this);
 			this.ym();
 			var O = ["lrs/newlayer", "lrs/bin"];
 			for (var s = 0; s < this.o_.length; s++) {
@@ -73154,13 +73154,13 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 		};
 
 	function YC(O) {
-			mM.call(this, [9, O ? 4 : 5], !1, null, O ? mM.tt.hWu : mM.tt.hWP);
+			DockPanel.call(this, [9, O ? 4 : 5], !1, null, O ? DockPanel.tt.hWu : DockPanel.tt.hWP);
 			this.$T.setAttribute("style", "min-width:240px;");
 			this.hQe = O;
 			this.hz = null;
 			this.TM = null
 		}
-	YC.prototype = new mM("");
+	YC.prototype = new DockPanel("");
 	YC.prototype.kg = function () {
 			this.hz = new YY;
 			var O = this.hz,
@@ -73231,7 +73231,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 			}
 		};
 	YC.prototype.a = function () {
-			mM.prototype.a.call(this);
+			DockPanel.prototype.a.call(this);
 			if (this.hz) this.hz.a()
 		};
 	YC.prototype.Pr = function (O, s) {
@@ -73241,7 +73241,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 		};
 
 	function Yk() {
-			mM.call(this, [13, 0], !1, null, mM.tt.PG);
+			DockPanel.call(this, [13, 0], !1, null, DockPanel.tt.PG);
 			this.gr = 0;
 			this.hor = 0;
 			this.TM = null;
@@ -73260,7 +73260,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 			this.kj.u(V.E.c, this.wg, this);
 			O.appendChild(this.kj.j)
 		}
-	Yk.prototype = new mM("");
+	Yk.prototype = new DockPanel("");
 	Yk.prototype.hMH = function (O) {
 			this.gr = this.gH.indexOf(O.currentTarget);
 			this.yY()
@@ -73306,7 +73306,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 		};
 
 	function UR() {
-			mM.call(this, "CSS", !1, null, mM.tt.CSS);
+			DockPanel.call(this, "CSS", !1, null, DockPanel.tt.CSS);
 			this.QL = null;
 			var O = V.z("div", "padded");
 			this.$T.appendChild(O);
@@ -73315,7 +73315,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 			this.pH.setAttribute("style", "display:block;tab-size:4; font-family:monospace; width:98%; min-width:270px;");
 			O.appendChild(this.pH)
 		}
-	UR.prototype = new mM("");
+	UR.prototype = new DockPanel("");
 	UR.prototype.md = function (O) {
 			this.QL = O;
 			this.yY()
@@ -73337,7 +73337,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 		};
 
 	function hI() {
-			mM.call(this, [9, 6], !1, null, mM.tt.hWB);
+			DockPanel.call(this, [9, 6], !1, null, DockPanel.tt.hWB);
 			this.$T.setAttribute("style", "min-width:240px;");
 			this.QL = null;
 			this.TM = null;
@@ -73376,7 +73376,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 			this.Gk.U("W: 0");
 			this.DF.U("H: 0")
 		}
-	hI.prototype = new mM("");
+	hI.prototype = new DockPanel("");
 	hI.prototype.Md = function (O, s, k, G, A) {
 			var H = O.K.VU(A.x, A.y),
 				e = new C(Math.floor(H.x), Math.floor(H.y));
@@ -73419,7 +73419,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 			this.DF.U(mB.get([12, 42]).charAt(0) + ": " + G)
 		};
 	hI.prototype.a = function () {
-			mM.prototype.a.call(this);
+			DockPanel.prototype.a.call(this);
 			this.di()
 		};
 	hI.prototype.md = function (O, s, k) {
@@ -73429,7 +73429,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 		};
 
 	function hn() {
-			mM.call(this, [9, 1], !1, null, mM.tt.LR);
+			DockPanel.call(this, [9, 1], !1, null, DockPanel.tt.LR);
 			this.kV = null;
 			this.ox = null;
 			this.WD = null;
@@ -73707,7 +73707,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 			this.hKQ = new np(jC.hXy(), jC.hwb());
 			this.u("rclick", this.hMg, this)
 		}
-	hn.prototype = new mM("");
+	hn.prototype = new DockPanel("");
 	hn.prototype.Pk = function () {
 			return new C(253, 0)
 		};
@@ -73796,7 +73796,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 			this.k(H)
 		};
 	hn.prototype.a = function () {
-			mM.prototype.a.call(this);
+			DockPanel.prototype.a.call(this);
 			this.CD.a();
 			this.k$.a();
 			this.da.a();
@@ -74335,7 +74335,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 	mS.prototype.hhF = function (O) {
 			if (O.detail == 1) return;
 			this.tH.setAttribute("draggable", "false");
-			var s = new mM.kR(this.wy, this.Ay.bind(this))
+			var s = new DockPanel.kR(this.wy, this.Ay.bind(this))
 		};
 	mS.prototype.Ay = function (O) {
 			this.dv({
@@ -74392,11 +74392,11 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 						j = new d(V.E.Hv, !0);
 					if (k == 0 && (mu.get(H.add) || H.add.SoCo || H.add.GdFl || H.add.PtFl)) e.data = {
 							S: V.A.dD,
-							GF: mM.tt.Pg
+							GF: DockPanel.tt.Pg
 						};
 					else if (k != 0 && k != -1) e.data = {
 							S: V.A.dD,
-							GF: mM.tt.Pg
+							GF: DockPanel.tt.Pg
 						};
 					else if (k == 0 && H.add.SoLd) j.data = {
 							jn: "placedLayerEditContents",
@@ -74577,7 +74577,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 		};
 
 	function ha() {
-			mM.call(this, "Guide Guy", !1, null, mM.tt.hCG);
+			DockPanel.call(this, "Guide Guy", !1, null, DockPanel.tt.hCG);
 			this.QL = null;
 			this.sV = [];
 			var O = V.z("div", "form padded");
@@ -74654,7 +74654,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 					O.appendChild(c.j)
 				}
 		}
-	ha.prototype = new mM("");
+	ha.prototype = new DockPanel("");
 	ha.prototype.hYR = function (O) {
 			var s = this.sV,
 				k = s.indexOf(O.target),
@@ -74757,13 +74757,13 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 		};
 
 	function hx() {
-			mM.call(this, [9, 2], !1, null, mM.tt.Pg);
+			DockPanel.call(this, [9, 2], !1, null, DockPanel.tt.Pg);
 			this.hJV = null;
 			this.ps = null;
 			this.TM = null;
 			this.hJg = -1
 		}
-	hx.prototype = new mM("");
+	hx.prototype = new DockPanel("");
 	hx.prototype.kg = function () {
 			this.ss = V.z("div", "padded");
 			this.ss.style.width = "22em";
@@ -74823,7 +74823,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 			this.k(A)
 		};
 	hx.prototype.a = function () {
-			mM.prototype.a.call(this);
+			DockPanel.prototype.a.call(this);
 			if (this.ss == null) return;
 			this.md(this.ps);
 			for (var O = 0; O < 3; O++) {
@@ -75213,7 +75213,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 		};
 
 	function ex(O) {
-			mM.call(this, O.name, !0);
+			DockPanel.call(this, O.name, !0);
 			this.ox = O;
 			this.WO = null;
 			this.dq = !1;
@@ -75245,7 +75245,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 			this.lK = 4;
 			V.Hd(G)
 		}
-	ex.prototype = new mM;
+	ex.prototype = new DockPanel;
 	ex.prototype.hGn = function () {
 			if (this.ox.ku()) return window.confirm(mB.get([22, 6, 3]) + " " + this.ox.name + ". " + mB.get([22, 6, 4]));
 			return !0
@@ -76027,7 +76027,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 		};
 
 	function YP() {
-			mM.call(this, [9, 7], !1, null, mM.tt.hWR);
+			DockPanel.call(this, [9, 7], !1, null, DockPanel.tt.hWR);
 			this.$T.setAttribute("style", "min-width:240px;");
 			this.ps = null;
 			this.yi = -1;
@@ -76051,7 +76051,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 					this.PD.push(G)
 				}
 		}
-	YP.prototype = new mM("");
+	YP.prototype = new DockPanel("");
 	YP.prototype.dv = function (O) {
 			var s = new d(V.E.H, !0);
 			s.data = O;
@@ -76068,7 +76068,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 			if (s == 2) this.yi = -1
 		};
 	YP.prototype.a = function () {
-			mM.prototype.a.call(this);
+			DockPanel.prototype.a.call(this);
 			for (var O = 0; O < this.PD.length; O++) this.PD[O].a()
 		};
 	YP.prototype.md = function (O) {
@@ -76140,7 +76140,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 			if (O.target != this.pO && O.target != this.j) return;
 			if (O.detail == 1) this.k(new d("activate", !1));
 			else {
-				var s = new mM.kR(this.pO, this.Ay.bind(this))
+				var s = new DockPanel.kR(this.pO, this.Ay.bind(this))
 			}
 		};
 	jG.prototype.hnI = function (O) {
@@ -76172,7 +76172,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 		};
 
 	function jR() {
-			mM.call(this, [9, 11], !1, null, mM.tt.hCO);
+			DockPanel.call(this, [9, 11], !1, null, DockPanel.tt.hCO);
 			var O = V.z("div", "padded");
 			O.setAttribute("style", "min-width:15em");
 			this.$T.appendChild(O);
@@ -76190,7 +76190,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 			this.hCd = this.tQ.bind(this);
 			this.QL = null
 		}
-	jR.prototype = new mM("");
+	jR.prototype = new DockPanel("");
 	jR.prototype.HQ = function (O, s) {
 			this.yY()
 		};
@@ -76269,17 +76269,17 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 		};
 
 	function jZ(O) {
-			mM.call(this, O.name, !1, O.icon, "plg_" + O.name);
+			DockPanel.call(this, O.name, !1, O.icon, "plg_" + O.name);
 			if (!O.url.startsWith("http")) return;
 			var s = V.z("iframe", "padded");
 			s.setAttribute("src", O.url);
 			s.setAttribute("style", "width:" + O.width + "px; height:" + O.height + "px");
 			this.$T.appendChild(s)
 		}
-	jZ.prototype = new mM("");
+	jZ.prototype = new DockPanel("");
 
 	function hr() {
-			mM.call(this, [9, 12], !1, null, mM.tt.Lj);
+			DockPanel.call(this, [9, 12], !1, null, DockPanel.tt.Lj);
 			this.TM = null;
 			this.FB = new Oe(T.TY);
 			this.FB.parent = this;
@@ -76288,7 +76288,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 			this.$T.appendChild(O);
 			O.appendChild(this.FB.iJ)
 		}
-	hr.prototype = new mM("");
+	hr.prototype = new DockPanel("");
 	hr.prototype.uQ = function () {
 			this.FB.rs(this.TM.Yx)
 		};
@@ -76300,7 +76300,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 			this.FB.hBr(this.TM.Yi)
 		};
 	hr.prototype.a = function () {
-			mM.prototype.a.call(this);
+			DockPanel.prototype.a.call(this);
 			this.FB.a()
 		};
 
@@ -81030,7 +81030,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 				var Y = new d(V.E.b);
 				Y.data = {
 						S: V.A.dD,
-						GF: mM.tt.hID
+						GF: DockPanel.tt.hID
 					};
 				Y.data = {
 						S: V.A.wW,
@@ -82213,7 +82213,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 			Js: 2
 		},
 		{
-			Fx: new hn,
+			Fx: new hn, // LayersPan
 			Js: 1
 		},
 		{
@@ -82229,7 +82229,7 @@ default = "{ \"classID\": \"null\", \"Scl\": {\"t\": \"UntF\", \"v\": { \"type\"
 			Js: 4
 		},
 		{
-			Fx: new jI, // LujinPan
+			Fx: new jI, // LujingPan
 			Js: 1
 		},
 		{
